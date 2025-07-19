@@ -16,6 +16,7 @@ folders_and_files = {
         "__init__.py", "llm_manager.py", "chain.py", "prompt_templates.py",
         "segmentation_engine.py", "recommendation_engine.py", "ad_generator.py"
     ],
+    "core/utils": ["campaign_recs.py"],
 
     "data_preprocessing_pipeline": [
         "__init__.py", "user_data_analyzer.py", "data_cleaner.py", "utils.py"
@@ -37,6 +38,7 @@ folders_and_files = {
     "workflows/graphs/campaign": ["__init__.py"],
 
     "workflows/graphs/campaign/nodes": [
+        "__init__.py",
         "segment_node.py", "generate_ad_node.py",
         "recommend_node.py", "human_in_the_loop_node.py", 
         "feedback_loop_node.py"
@@ -46,11 +48,11 @@ folders_and_files = {
         "persona_subgraph.py", "strategy_subgraph.py"
     ],
 
-    "workflows/graphs/campaign/prompts": ["ad_prompt.py"],
+    "workflows/graphs/campaign/prompts": ["segment_prompt.py", "ad_prompt.py", "recommendation_prompt.py", "human_in_the_loop_prompt.py"],
 
     "tests": ["test_user.py", "test_campaign.py", "test_llm_integration.py"],
 
-    "logs": ["app.log"]
+    "logs": ["__init__.py", "logging_config.py", "app.log"]
 }
 
 base_files = [".env", ".env.example", "requirements.txt"]

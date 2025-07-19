@@ -1,0 +1,217 @@
+2025-07-17 19:31:32.988 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: openai | Temperature: 0.0 | Overrides: {}
+2025-07-17 19:39:25.377 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 19:42:42.925 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 19:42:43.445 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 19:46:24.706 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 19:46:25.151 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 19:46:25.152 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:05:16.319 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:05:16.784 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:05:16.784 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:16:49.684 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:16:50.167 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:16:50.168 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:16:50.503 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:17:43.814 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:17:44.276 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:17:44.277 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:17:44.591 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:17:57.519 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:17:58.067 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:17:58.068 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:17:58.410 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:17:58.411 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:17:58.741 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:17:58.741 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:19:30.225 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:19:30.679 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:19:30.679 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:19:31.009 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:19:31.011 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:19:31.346 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:19:31.346 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:19:31.347 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:19:31.693 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:35:51.992 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:35:52.463 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:35:52.464 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:35:52.806 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:35:52.806 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:35:53.144 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:37:08.186 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:37:08.681 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:37:08.682 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:37:09.014 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:37:09.014 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:37:09.327 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:37:20.678 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:37:21.219 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:37:21.219 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:37:21.571 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:37:21.571 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:37:21.918 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:37:21.918 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:37:22.244 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 20:37:22.245 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:43:20.977 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:43:21.548 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:43:21.549 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:43:21.901 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:43:21.901 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:43:22.258 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:43:22.258 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:43:22.597 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 20:43:22.598 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:46:32.339 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:46:32.804 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:46:32.805 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:46:33.129 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:46:33.129 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:46:33.456 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:46:33.457 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:46:33.786 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 20:46:33.786 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:48:47.296 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:48:47.763 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:48:47.764 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:48:48.083 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:48:48.084 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:48:48.431 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:48:48.432 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:48:48.753 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 20:48:48.753 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:53:00.424 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:53:00.885 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:53:00.886 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:53:01.209 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:53:01.210 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:53:01.555 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:53:01.556 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:53:01.880 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 20:53:01.880 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:55:48.117 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:55:48.564 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:55:48.564 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:55:48.877 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:55:48.878 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:55:49.207 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:55:49.208 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:55:49.556 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 20:55:49.556 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 20:57:25.590 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:57:26.063 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 20:57:26.064 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:57:26.372 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 20:57:26.373 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:57:26.704 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 20:57:26.705 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 20:57:27.035 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 20:57:27.036 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 21:00:45.932 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 21:00:46.377 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 21:00:46.378 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 21:00:46.691 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 21:00:46.692 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 21:00:47.002 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 21:00:47.003 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 21:00:47.310 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 21:00:47.310 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 21:03:07.071 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 21:03:07.544 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 21:03:07.544 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 21:03:07.870 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 21:03:07.870 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 21:03:08.186 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 21:03:08.186 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 21:03:08.503 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 21:03:08.503 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:05:45.337 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:05:45.789 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:05:45.790 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:05:46.115 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:05:46.115 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:05:46.455 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:05:46.456 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:05:46.779 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:05:46.780 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:13:10.893 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:13:11.361 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:13:11.361 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:13:11.690 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:13:11.690 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:13:12.010 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:13:12.011 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:13:12.331 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:13:12.331 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:13:30.873 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:13:31.364 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:13:31.364 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:13:31.678 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:13:31.678 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:13:32.000 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:13:32.000 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:13:32.354 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:13:32.354 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:21:57.786 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:21:58.277 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:21:58.277 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:21:58.611 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:21:58.611 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:21:58.921 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:21:58.921 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:21:59.232 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:21:59.232 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:32:09.373 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:32:09.849 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:32:09.849 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:32:10.183 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:32:10.184 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:32:10.527 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:32:10.527 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:32:10.876 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:32:10.876 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:38:08.576 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:38:09.022 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:38:09.024 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:38:09.333 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:38:09.334 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:38:09.646 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:38:09.647 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:38:09.969 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:38:09.969 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:38:48.277 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:38:48.725 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:38:48.726 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:38:49.033 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:38:49.034 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:38:49.344 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:38:49.344 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:38:49.666 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:38:49.666 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:40:30.420 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:40:30.863 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:40:30.864 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:40:31.168 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:40:31.168 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:40:31.472 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:40:31.473 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:40:31.794 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:40:31.795 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:42:34.936 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:42:35.378 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:42:35.379 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:42:35.690 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:42:35.691 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:42:36.002 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:42:36.003 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:42:36.310 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:42:36.311 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-17 23:50:06.591 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:50:07.036 | INFO     | workflows.graphs.campaign.nodes.segment_node:__init__:45 - UserSegmenter initialized successfully.
+2025-07-17 23:50:07.036 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:50:07.338 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:37 - RecommendNode initialized successfully with recommendation generation chain.
+2025-07-17 23:50:07.339 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:50:07.649 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:36 - GenerateAdNode initialized successfully with ad generation chain.
+2025-07-17 23:50:07.649 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.0 | Overrides: {}
+2025-07-17 23:50:07.951 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:44 - HumanReviewRouter initialized successfully
+2025-07-17 23:50:07.951 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.

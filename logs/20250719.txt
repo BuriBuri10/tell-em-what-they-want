@@ -1,0 +1,705 @@
+2025-07-19 08:00:21.493 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 08:00:21.514 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:00:22.312 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:00:22.313 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:237 - UserSegmenter initialized with structured prompt.
+2025-07-19 08:00:22.314 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:00:22.889 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:00:22.892 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 08:00:22.893 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:00:23.405 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:00:23.406 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:142 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 08:00:23.406 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:00:23.991 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:00:23.991 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 08:00:23.992 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-19 08:00:24.080 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 08:00:24.135 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 08:00:24.136 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=uuyff, query='Summer campaign to promote apple products as welcome kit for gen z employees'
+2025-07-19 08:00:25.356 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:278 - Predicted segment: standard
+2025-07-19 08:00:26.680 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 08:00:27.305 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:178 - Ad successfully generated.
+2025-07-19 08:00:27.308 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/uuyff_2025-07-19_08-00-27.txt
+2025-07-19 08:00:27.311 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 08:00:38.959 | WARNING  | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:295 - No feedback provided for the ad.
+2025-07-19 08:00:38.961 | WARNING  | workflows.graphs.campaign.nodes.feedback_loop_node:process:31 - No feedback provided for the ad.
+2025-07-19 08:00:38.961 | ERROR    | __main__:run:141 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 08:00:38.970 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 08:00:39.831 | INFO     | __main__:main:176 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 08:12:58.062 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:12:58.734 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:12:58.735 | INFO     | __main__:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 08:12:58.735 | INFO     | __main__:process:284 - Human review forced: True
+2025-07-19 08:13:19.983 | INFO     | __main__:process:293 - Captured human feedback: 99ub9ubibivvi
+2025-07-19 08:13:40.792 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:13:41.585 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:13:41.586 | INFO     | __main__:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 08:13:41.586 | INFO     | __main__:process:284 - Human review forced: True
+2025-07-19 08:15:30.187 | INFO     | __main__:process:293 - Captured human feedback: itcoto8tc;ic
+2025-07-19 08:17:23.739 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:17:24.369 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:17:24.369 | INFO     | __main__:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 08:17:24.369 | INFO     | __main__:process:284 - Human review forced: True
+2025-07-19 08:17:29.328 | INFO     | __main__:process:293 - Captured human feedback: oyvo8vyov
+2025-07-19 08:17:45.930 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:17:46.557 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:17:46.558 | INFO     | __main__:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 08:17:46.558 | INFO     | __main__:process:284 - Human review forced: True
+2025-07-19 08:17:51.074 | WARNING  | __main__:process:295 - No feedback provided for the ad.
+2025-07-19 08:19:15.296 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 08:19:15.299 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:19:16.113 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:19:16.114 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:237 - UserSegmenter initialized with structured prompt.
+2025-07-19 08:19:16.114 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:19:16.637 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:19:16.637 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 08:19:16.637 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:19:17.148 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:19:17.148 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:142 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 08:19:17.149 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:19:17.670 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:19:17.670 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 08:19:17.670 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-19 08:19:17.777 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 08:19:17.789 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 08:19:17.790 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=iyckvovo, query='campaign for apple products ass wecome kit'
+2025-07-19 08:19:18.176 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:278 - Predicted segment: premium
+2025-07-19 08:19:19.531 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 08:19:19.878 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:188 - Ad successfully generated.
+2025-07-19 08:19:19.886 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/iyckvovo_2025-07-19_08-19-19.txt
+2025-07-19 08:19:19.889 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 08:19:28.995 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: cost optimizaton
+2025-07-19 08:19:28.996 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:35 - Ad feedback received: cost optimizaton
+2025-07-19 08:19:28.998 | ERROR    | __main__:run:141 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 08:19:29.003 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 08:19:29.788 | INFO     | __main__:main:176 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 08:28:07.721 | INFO     | __main__:__init__:16 - FeedbackLoopNode initialized successfully.
+2025-07-19 08:28:07.721 | INFO     | __main__:process:35 - Ad feedback received: The tone is too formal for Gen Z.
+2025-07-19 08:40:02.446 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:40:03.138 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:40:03.138 | INFO     | __main__:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 08:40:04.245 | ERROR    | __main__:process:64 - Feedback processing failed: "GraphState" object has no field "feedback_analysis"
+2025-07-19 08:41:46.118 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:41:46.902 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:41:46.903 | INFO     | __main__:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 08:41:47.985 | INFO     | __main__:process:61 - Feedback processed and analyzed successfully.
+2025-07-19 08:42:38.470 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 08:42:38.473 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:42:39.200 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:42:39.200 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 08:42:39.201 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:42:39.769 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:42:39.770 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 08:42:39.771 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:42:40.247 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:42:40.248 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 08:42:40.248 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:42:40.724 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:42:40.725 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 08:42:40.725 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:42:41.250 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:42:41.251 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 08:42:41.328 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 08:42:41.344 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 08:42:41.344 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=jhvuuc, query='campaign for apple products ass wecome kit'
+2025-07-19 08:42:41.721 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 08:42:43.183 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 08:42:43.532 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 08:42:43.534 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/jhvuuc_2025-07-19_08-42-43.txt
+2025-07-19 08:42:43.536 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 08:42:47.571 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: hkxkuutcou
+2025-07-19 08:42:48.642 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:61 - Feedback processed and analyzed successfully.
+2025-07-19 08:42:48.645 | ERROR    | __main__:run:141 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 08:42:48.656 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 08:42:49.544 | INFO     | __main__:main:176 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 08:43:43.456 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 08:43:43.458 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:43:44.197 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:43:44.197 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 08:43:44.197 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:43:44.716 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:43:44.717 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 08:43:44.717 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:43:45.245 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:43:45.245 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 08:43:45.246 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:43:45.788 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:43:45.788 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 08:43:45.789 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 08:43:46.418 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 08:43:46.418 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 08:43:46.509 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 08:43:46.534 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 08:43:46.537 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=gckucukc, query='apple products as welcome kit for gen z employees'
+2025-07-19 08:43:46.987 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 08:43:48.592 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 08:43:48.958 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 08:43:48.960 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/gckucukc_2025-07-19_08-43-48.txt
+2025-07-19 08:43:48.963 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 08:43:52.194 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: lglfhkf
+2025-07-19 08:43:52.997 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:61 - Feedback processed and analyzed successfully.
+2025-07-19 08:43:53.000 | ERROR    | __main__:run:141 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 08:43:53.010 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 08:43:53.772 | INFO     | __main__:main:176 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 16:55:32.478 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 16:55:32.481 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 16:55:32.923 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 16:55:32.923 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 16:55:32.924 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 16:55:33.234 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 16:55:33.235 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 16:55:33.235 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 16:55:33.540 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 16:55:33.541 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 16:55:33.541 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 16:55:33.847 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 16:55:33.847 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 16:55:33.847 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 16:55:34.154 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 16:55:34.154 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 16:55:34.207 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 16:55:34.217 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 16:55:34.217 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=hviyyvib, query='apple products as welcome kit for gen z employees'
+2025-07-19 16:55:35.577 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 16:55:37.448 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 16:55:41.046 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 16:55:41.047 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/hviyyvib_2025-07-19_16-55-41.txt
+2025-07-19 16:55:41.048 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 16:55:44.851 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: bboububo
+2025-07-19 16:55:49.042 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 16:55:49.043 | ERROR    | __main__:run:141 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 16:55:49.047 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 16:55:49.977 | INFO     | __main__:main:176 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 17:11:12.173 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 17:11:12.174 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:11:12.574 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:11:12.575 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 17:11:12.575 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:11:12.881 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:11:12.881 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 17:11:12.882 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:11:13.191 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:11:13.192 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 17:11:13.192 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:11:13.498 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:11:13.498 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 17:11:13.498 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:11:13.808 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:11:13.808 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 17:11:13.861 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 17:11:13.869 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 17:11:13.869 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=lglfhkf, query='apple products as welcome kit for gen z employees'
+2025-07-19 17:11:14.530 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 17:11:16.244 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 17:11:17.447 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 17:11:17.447 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/lglfhkf_2025-07-19_17-11-17.txt
+2025-07-19 17:11:17.449 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 17:11:21.662 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: kukvk
+2025-07-19 17:11:23.009 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 17:11:23.010 | ERROR    | __main__:run:148 - Workflow run failed: 'GraphState' object has no attribute 'ad_content'
+2025-07-19 17:11:23.013 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 17:11:23.806 | INFO     | __main__:main:183 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 17:27:28.725 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 17:27:28.726 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:27:29.120 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:27:29.121 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 17:27:29.121 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:27:29.425 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:27:29.425 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 17:27:29.425 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:27:29.730 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:27:29.730 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 17:27:29.730 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:27:30.040 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:27:30.040 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 17:27:30.040 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:27:30.347 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:27:30.348 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 17:27:30.400 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 17:27:30.408 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 17:27:30.408 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=lglfhkf, query='apple products as welcome kit for gen z employees'
+2025-07-19 17:27:31.067 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 17:27:33.603 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 17:27:35.785 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 17:27:35.785 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/lglfhkf_2025-07-19_17-27-35.txt
+2025-07-19 17:27:35.786 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 17:27:38.646 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: vsvvwb
+2025-07-19 17:27:39.863 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 17:27:39.866 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/lglfhkf_2025-07-19_17-27-39.txt
+2025-07-19 17:27:39.870 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 17:27:41.431 | INFO     | __main__:main:183 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 17:29:32.805 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 17:29:32.806 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:29:33.207 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:29:33.208 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 17:29:33.208 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:29:33.531 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:29:33.532 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 17:29:33.532 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:29:33.836 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:29:33.837 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 17:29:33.837 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:29:34.145 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:29:34.145 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 17:29:34.145 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:29:34.458 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:29:34.459 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 17:29:34.513 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 17:29:34.521 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 17:29:34.521 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=hvkv.k, query='apple products as welcome kit for gen z employees'
+2025-07-19 17:29:35.452 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 17:29:37.688 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 17:29:39.342 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 17:29:39.343 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/hvkv.k_2025-07-19_17-29-39.txt
+2025-07-19 17:29:39.344 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 17:29:43.227 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: b, , ,blvlvl
+2025-07-19 17:29:44.410 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 17:29:44.412 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/hvkv.k_2025-07-19_17-29-44.txt
+2025-07-19 17:29:44.416 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 17:29:46.140 | INFO     | __main__:main:183 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 17:38:33.547 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 17:38:33.549 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:38:33.946 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:38:33.947 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 17:38:33.947 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:38:34.254 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:38:34.254 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 17:38:34.254 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:38:34.566 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:38:34.567 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 17:38:34.567 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:38:34.872 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:38:34.872 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 17:38:34.872 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:38:35.175 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:38:35.175 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 17:38:35.229 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 17:38:35.237 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 17:38:35.237 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=jhvkuyvovh, query='apple welcome kits'
+2025-07-19 17:38:36.190 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 17:38:38.070 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 17:38:40.118 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 17:38:40.119 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/jhvkuyvovh_2025-07-19_17-38-40.txt
+2025-07-19 17:38:40.120 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 17:39:01.743 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: ugcuciyviyv
+2025-07-19 17:39:02.814 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 17:39:02.815 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/jhvkuyvovh_2025-07-19_17-39-02.txt
+2025-07-19 17:39:02.818 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 17:39:03.608 | INFO     | __main__:main:183 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 17:42:01.300 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 17:42:01.302 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:42:01.758 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:42:01.758 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 17:42:01.759 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:42:02.085 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:42:02.086 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 17:42:02.086 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:42:02.415 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:42:02.415 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 17:42:02.415 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:42:02.790 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:42:02.790 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 17:42:02.790 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:42:03.119 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:42:03.120 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 17:42:03.176 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 17:42:03.185 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 17:42:03.185 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=kyuu, query='apple welcome kits'
+2025-07-19 17:42:04.306 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 17:42:06.205 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 17:42:07.249 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 17:42:07.250 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/kyuu_2025-07-19_17-42-07.txt
+2025-07-19 17:42:07.250 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 17:42:10.289 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: ibibibi
+2025-07-19 17:42:11.496 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 17:42:11.498 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/kyuu_2025-07-19_17-42-11.txt
+2025-07-19 17:42:11.501 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 17:42:12.263 | INFO     | __main__:main:183 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 17:52:17.548 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 17:52:17.550 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:52:17.942 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:52:17.942 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 17:52:17.942 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:52:18.245 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:52:18.246 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 17:52:18.246 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:52:18.551 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:52:18.553 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 17:52:18.553 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:52:18.860 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:52:18.861 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 17:52:18.861 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:52:19.165 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:52:19.166 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 17:52:19.220 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 17:52:19.228 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 17:52:19.228 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=ugcu, query='apple welcome kits'
+2025-07-19 17:52:22.993 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 17:52:25.145 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 17:52:27.311 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 17:52:27.312 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/ugcu_2025-07-19_17-52-27.txt
+2025-07-19 17:52:27.313 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 17:52:30.028 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: kh
+2025-07-19 17:52:33.203 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 17:52:33.204 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/ugcu_2025-07-19_17-52-33.txt
+2025-07-19 17:52:33.208 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 17:52:36.108 | INFO     | __main__:main:183 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 17:57:50.676 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 17:57:50.677 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:57:51.070 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:57:51.071 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 17:57:51.071 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:57:51.374 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:57:51.375 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 17:57:51.375 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:57:51.690 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:57:51.691 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 17:57:51.691 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:57:51.997 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:57:51.997 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 17:57:51.997 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 17:57:52.301 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 17:57:52.301 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 17:57:52.354 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 17:57:52.362 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 17:57:52.362 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=ugcu, query='apple welcome kits'
+2025-07-19 17:57:53.261 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 17:57:54.983 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 17:57:56.278 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 17:57:56.279 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/ugcu_2025-07-19_17-57-56.txt
+2025-07-19 17:57:56.280 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 17:58:00.208 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: gjc
+2025-07-19 17:58:02.100 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 17:58:02.101 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/ugcu_2025-07-19_17-58-02.txt
+2025-07-19 17:58:02.105 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 17:58:03.585 | INFO     | __main__:main:183 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 18:25:14.411 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:25:14.413 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:25:14.816 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:25:14.817 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:25:14.817 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:25:15.124 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:25:15.125 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:25:15.125 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:25:15.436 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:25:15.436 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:25:15.436 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:25:15.743 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:25:15.743 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:25:15.744 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:25:16.050 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:25:16.050 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:25:16.102 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:25:16.110 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:25:16.110 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=ugcu, query='apple welcome kits'
+2025-07-19 18:25:16.111 | ERROR    | __main__:run:148 - Workflow run failed: 1 validation error for GraphState
+campaign_recommendation
+  Input should be a valid string [type=string_type, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-07-19 18:25:16.115 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 18:25:16.821 | INFO     | __main__:main:183 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 18:26:01.784 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:26:01.786 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:26:02.227 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:26:02.227 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:26:02.227 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:26:02.596 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:26:02.596 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:26:02.596 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:26:02.922 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:26:02.922 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:26:02.923 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:26:03.256 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:26:03.256 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:26:03.257 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:26:03.643 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:26:03.644 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:26:03.700 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:26:03.708 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:26:03.708 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=ib, query='apple welcome kits'
+2025-07-19 18:26:04.416 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 18:26:06.018 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 18:26:06.863 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 18:26:06.864 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/ib_2025-07-19_18-26-06.txt
+2025-07-19 18:26:06.865 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 18:26:09.482 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: iviv
+2025-07-19 18:26:10.573 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 18:26:10.574 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/ib_2025-07-19_18-26-10.txt
+2025-07-19 18:26:10.578 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 18:26:11.260 | INFO     | __main__:main:182 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 18:41:07.921 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:41:07.922 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:41:08.317 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:41:08.317 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:41:08.318 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:41:08.620 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:41:08.621 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:41:08.621 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:41:08.927 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:41:08.927 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:41:08.927 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:41:09.232 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:41:09.232 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:41:09.232 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:41:09.536 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:41:09.537 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:41:09.589 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:41:09.597 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:41:09.597 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=ib, query='apple welcome kits'
+2025-07-19 18:41:10.269 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 18:41:11.900 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 18:41:12.776 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 18:41:12.776 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/ib_2025-07-19_18-41-12.txt
+2025-07-19 18:41:12.777 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 18:41:15.103 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: gc
+2025-07-19 18:41:16.375 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 18:41:16.376 | ERROR    | __main__:run:147 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 18:41:16.379 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 18:41:17.141 | INFO     | __main__:main:182 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 18:42:42.274 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:42:42.276 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:42:42.668 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:42:42.668 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:42:42.668 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:42:42.974 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:42:42.974 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:42:42.975 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:42:43.280 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:42:43.281 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:42:43.281 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:42:43.587 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:42:43.587 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:42:43.587 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:42:43.892 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:42:43.892 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:42:43.945 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:42:43.953 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:42:43.954 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=ib, query='apple welcome kits'
+2025-07-19 18:42:44.838 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 18:42:49.913 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 18:42:59.714 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 18:42:59.714 | INFO     | core.utils.campaign_recs:save:36 - Campaign report saved: campaign_outputs/ib_2025-07-19_18-42-59.txt
+2025-07-19 18:42:59.715 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 18:43:04.229 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: kuvvou
+2025-07-19 18:43:06.073 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 18:43:06.074 | ERROR    | __main__:run:147 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 18:43:06.077 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 18:43:06.682 | INFO     | __main__:main:182 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 18:46:45.230 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:46:45.232 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:46:45.624 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:46:45.624 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:46:45.624 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:46:45.928 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:46:45.928 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:46:45.928 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:46:46.233 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:46:46.233 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:46:46.234 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:46:46.542 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:46:46.543 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:46:46.543 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:46:46.849 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:46:46.850 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:46:46.902 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:46:46.910 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:46:46.911 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=ib, query='apple welcome kits'
+2025-07-19 18:46:47.953 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 18:46:49.934 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 18:46:51.105 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 18:46:51.106 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/ib_2025-07-19_18-46-51.txt
+2025-07-19 18:46:51.107 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 18:46:54.135 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: ib
+2025-07-19 18:46:55.813 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 18:46:55.814 | ERROR    | __main__:run:147 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 18:46:55.817 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 18:46:56.871 | INFO     | __main__:main:182 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 18:47:39.233 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:47:39.234 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:47:39.632 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:47:39.633 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:47:39.633 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:47:39.940 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:47:39.940 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:47:39.940 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:47:40.246 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:47:40.247 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:47:40.247 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:47:40.550 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:47:40.551 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:47:40.551 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:47:40.855 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:47:40.856 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:47:40.908 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:47:40.915 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:47:40.916 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=ib, query='apple welcome kits'
+2025-07-19 18:47:41.912 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 18:47:44.593 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 18:47:51.155 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 18:47:51.156 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/ib_2025-07-19_18-47-51.txt
+2025-07-19 18:47:51.157 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 18:47:54.797 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: ib
+2025-07-19 18:47:58.500 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 18:47:58.500 | ERROR    | __main__:run:147 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 18:47:58.504 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 18:48:00.332 | INFO     | __main__:main:182 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 18:48:52.850 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:48:52.852 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:48:53.241 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:48:53.242 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:48:53.242 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:48:53.545 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:48:53.545 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:48:53.545 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:48:53.849 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:48:53.850 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:48:53.850 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:48:54.162 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:48:54.163 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:48:54.163 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:48:54.465 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:48:54.465 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:48:54.519 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:48:54.527 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:48:54.527 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=gc, query='apple welcome kits'
+2025-07-19 18:49:56.261 | ERROR    | workflows.graphs.campaign.nodes.segmenting_node:process:94 - Segmentation failed: Connection error.
+2025-07-19 18:55:21.173 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:55:21.175 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:55:21.568 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:55:21.569 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:55:21.569 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:55:21.877 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:55:21.878 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:55:21.878 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:55:22.184 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:55:22.184 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:55:22.185 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:55:22.492 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:55:22.493 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:55:22.493 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:55:22.816 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:55:22.817 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:55:22.873 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:55:22.881 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:55:22.882 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=hg, query='apple welcome kits'
+2025-07-19 18:55:23.687 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 18:55:25.669 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 18:55:26.908 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 18:55:26.909 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/hg_2025-07-19_18-55-26.txt
+2025-07-19 18:55:26.910 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 18:55:32.043 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: kbbk
+2025-07-19 18:55:33.268 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 18:55:33.270 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/hg_2025-07-19_18-55-33.txt
+2025-07-19 18:55:33.274 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 18:55:34.227 | INFO     | __main__:main:182 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 18:57:06.766 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 18:57:06.767 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:57:07.159 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:57:07.160 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 18:57:07.160 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:57:07.465 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:57:07.466 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 18:57:07.466 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:57:07.771 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:57:07.772 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 18:57:07.772 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:57:08.078 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:57:08.078 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 18:57:08.078 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 18:57:08.383 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 18:57:08.383 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 18:57:08.436 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 18:57:08.444 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 18:57:08.444 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=hg, query='apple welcome kits'
+2025-07-19 18:57:09.309 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 18:57:11.466 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 18:57:12.865 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 18:57:12.867 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/hg_2025-07-19_18-57-12.txt
+2025-07-19 18:57:12.868 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 18:57:16.419 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: hvhv
+2025-07-19 18:57:17.629 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 18:57:17.631 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/hg_2025-07-19_18-57-17.txt
+2025-07-19 18:57:17.635 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 18:57:18.360 | INFO     | __main__:main:178 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-19 19:14:07.173 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 19:14:07.181 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:14:07.683 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:14:07.684 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 19:14:07.684 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:14:08.092 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:14:08.092 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 19:14:08.093 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:14:08.437 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:14:08.438 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 19:14:08.438 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:14:08.790 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:14:08.790 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 19:14:08.790 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:14:09.133 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:14:09.133 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 19:14:09.191 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 19:14:09.200 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 19:14:09.201 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=kbbk, query='apple welcome kits'
+2025-07-19 19:14:09.971 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 19:14:11.978 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 19:14:14.762 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 19:14:14.763 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/kbbk_2025-07-19_19-14-14.txt
+2025-07-19 19:14:14.764 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 19:14:17.133 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: kkvi
+2025-07-19 19:14:17.851 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 19:14:17.852 | ERROR    | __main__:run:143 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 19:21:45.202 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 19:21:45.217 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:21:45.758 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:21:45.758 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 19:21:45.758 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:21:46.080 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:21:46.080 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 19:21:46.081 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:21:46.418 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:21:46.418 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 19:21:46.418 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:21:46.768 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:21:46.769 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 19:21:46.769 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:21:47.101 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:21:47.102 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 19:21:47.158 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 19:21:47.167 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 19:21:47.167 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=hvhv, query='apple welcome kits'
+2025-07-19 19:21:48.022 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 19:21:49.671 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 19:21:50.418 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 19:21:50.420 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/hvhv_2025-07-19_19-21-50.txt
+2025-07-19 19:21:50.420 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 19:21:54.611 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: hg
+2025-07-19 19:21:55.631 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 19:21:55.632 | ERROR    | __main__:run:143 - Workflow run failed: 'dict' object has no attribute 'user_segment'
+2025-07-19 19:23:49.294 | INFO     | __main__:__init__:22 - Initializing CampaignWorkflow...
+2025-07-19 19:23:49.296 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:23:49.775 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:23:49.775 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-19 19:23:49.775 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:23:50.098 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:23:50.100 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:26 - RecommendNode initialized with inline prompt chain.
+2025-07-19 19:23:50.100 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:23:50.422 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:23:50.422 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-19 19:23:50.422 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:23:50.747 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:23:50.747 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:243 - HumanReviewRouter initialized successfully with inline prompt.
+2025-07-19 19:23:50.747 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-19 19:23:51.065 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-19 19:23:51.066 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-19 19:23:51.121 | INFO     | __main__:_build_graph:55 - Workflow graph defined.
+2025-07-19 19:23:51.131 | INFO     | __main__:__init__:32 - CampaignOrchestrator initialized successfully
+2025-07-19 19:23:51.131 | INFO     | __main__:run:123 - Running CampaignWorkflow for user_id=hg, query='apple welcome kits'
+2025-07-19 19:23:53.590 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-19 19:23:55.173 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:73 - Campaign recommendation generated successfully.
+2025-07-19 19:23:56.738 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-19 19:23:56.739 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/hg_2025-07-19_19-23-56.txt
+2025-07-19 19:23:56.740 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:284 - Human review forced: True
+2025-07-19 19:24:00.677 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:293 - Captured human feedback: uf7
+2025-07-19 19:24:01.899 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:69 - Feedback processed and analyzed successfully.
+2025-07-19 19:24:01.900 | INFO     | __main__:_save_campaign_report:109 - Campaign report saved: campaign_outputs/hg_2025-07-19_19-24-01.txt
+2025-07-19 19:24:01.905 | WARNING  | __main__:get_graph_structure:71 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-19 19:24:02.619 | INFO     | __main__:main:212 - Saved campaign graph structure as campaign_graph_structure.png
