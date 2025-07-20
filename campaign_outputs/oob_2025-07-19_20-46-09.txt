@@ -1,0 +1,18 @@
+📊 CAMPAIGN REPORT
+                ────────────────────────────
+                User ID: oob
+                Timestamp: 2025-07-19_20-46-09
+                Campaign Query: Launch summer sale campaign for Gen Z
+
+                User Segment: standard
+                Campaign Objective: Promote general-purpose products to average customers
+
+                Recommendation:
+                N/A
+
+                Generated Ad Copy:
+                N/A
+
+                Human Feedback:
+                No feedback provided.
+                

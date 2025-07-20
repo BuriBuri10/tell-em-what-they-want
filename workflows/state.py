@@ -16,8 +16,11 @@ class GraphState(BaseModel):
     """
     State object shared between LangGraph nodes in the marketing campaign workflow.
     """
+    # Flow control flags
+    has_external_logs: Annotated[Optional[bool], Reducer.update] = False
 
     # Inputs
+    external_user_logs: Annotated[Optional[List[Dict]], Reducer.update] = None
     query: Annotated[Optional[str], Reducer.update] = None
     vdb_query: Annotated[Optional[str], Reducer.update] = None
     user_profile: Annotated[Optional[str], Reducer.update] = None
@@ -67,7 +70,7 @@ class GraphState(BaseModel):
     ad_generation_ready: Annotated[Optional[bool], Reducer.update] = False  # ✅ Add this
     ad_output: Annotated[Optional[str], Reducer.update] = None
     ad_content: Annotated[Optional[str], Reducer.update] = None
-    
+
 
     # Control
     error: Annotated[Optional[str], Reducer.update] = None

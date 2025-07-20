@@ -38,9 +38,10 @@ folders_and_files = {
     "workflows/graphs/campaign": ["__init__.py"],
 
     "workflows/graphs/campaign/nodes": [
-        "__init__.py",
-        "segment_node.py", "generate_ad_node.py",
-        "recommend_node.py", "human_in_the_loop_node.py", 
+        "__init__.py", "check_external_logs_node.py",
+        "segmenting_node.py", "analytics_node.py",
+        "generate_ad_node.py", "recommend_node.py",
+        "human_in_the_loop_node.py", 
         "feedback_loop_node.py"
     ],
 

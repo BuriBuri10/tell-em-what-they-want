@@ -6,6 +6,8 @@ from langgraph.graph import START, END, StateGraph
 from langchain_core.runnables.graph import CurveStyle
 
 from workflows.state import GraphState
+from workflows.graphs.campaign.nodes.check_external_logs_node import CheckExternalLogsNode
+from workflows.graphs.campaign.nodes.analytics_node import AnalyticsNode
 from workflows.graphs.campaign.nodes.segmenting_node import UserSegmenter
 from workflows.graphs.campaign.nodes.recommend_node import RecommendNode
 from workflows.graphs.campaign.nodes.generate_ad_node import GenerateAdNode
@@ -21,7 +23,9 @@ class CampaignWorkflow:
     def __init__(self):
         logger.info("Initializing CampaignWorkflow...")
 
-        self.segment_node = UserSegmenter()
+        self.check_external_logs_node = CheckExternalLogsNode()
+        self.analytics_node = AnalyticsNode()
+        self.segmenting_node = UserSegmenter()
         self.recommend_node = RecommendNode()
         self.generate_ad_node = GenerateAdNode()
         self.hitl = HumanReviewRouter()
@@ -38,15 +42,28 @@ class CampaignWorkflow:
         workflow = StateGraph(GraphState)
 
         # Define nodes
-        workflow.add_node("segment", self.segment_node.process)
+        # workflow.add_node()
+        workflow.add_node("check_external_logs", self.check_external_logs_node.process)
+        workflow.add_node("analytics", self.analytics_node.process)
+        workflow.add_node("segmenting", self.segmenting_node.process)
         workflow.add_node("recommend", self.recommend_node.process)
         workflow.add_node("generate_ad", self.generate_ad_node.process)
         workflow.add_node("human_review", self.hitl.process)
         workflow.add_node("feedback_loop", self.feedback_node.process)
 
         # Connect the flow
-        workflow.add_edge(START, "segment")
-        workflow.add_edge("segment", "recommend")
+        workflow.add_edge(START, "check_external_logs")
+        # workflow.add_conditional_edges(START, lambda x: x.is_query_valid, {True: "analytics", False: "segmanting"})
+        workflow.add_conditional_edges(
+            "check_external_logs",
+            lambda state: state.has_external_logs,
+            {
+                True: "analytics",
+                False: "segmenting"
+            }
+        )
+        workflow.add_edge("analytics", "recommend")
+        workflow.add_edge("segmenting", "recommend")
         workflow.add_edge("recommend", "generate_ad")
         workflow.add_edge("generate_ad", "human_review")
         workflow.add_edge("human_review", "feedback_loop")
