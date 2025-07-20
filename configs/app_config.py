@@ -15,6 +15,7 @@ class AppConfig:
     """
     _instance = None
     GROQ_MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
+    GEMINI_MODEL_NAME = "gemini-2.5-flash"
 
     def __init__(self):
         """

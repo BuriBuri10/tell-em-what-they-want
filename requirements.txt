@@ -1,0 +1,4 @@
+google-cloud-aiplatform>=1.71.1 # Check PyPI for the latest stable version
+langgraph>=0.0.60 # Check PyPI for the latest stable version
+langchain-core>=0.2.20 # Check PyPI for the latest stable version
+typing_extensions>=4.0 # Optional, but good practice

@@ -4,8 +4,8 @@ from threading import Lock
 from langchain_core.language_models import BaseLanguageModel
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
-from langchain_anthropic import ChatAnthropic
-from langchain_google_genai import ChatGoogleGenerativeAI
+# from langchain_anthropic import ChatAnthropic
+# from langchain_google_ai import ChatGoogleGenerativeAI
 
 from configs.app_config import AppConfig
 from logs.logging_config import logger

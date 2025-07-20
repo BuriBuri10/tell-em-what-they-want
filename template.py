@@ -38,6 +38,27 @@ folders_and_files = {
     "workflows/graphs/campaign": ["__init__.py"],
 
     "workflows/graphs/campaign/nodes": [
+        "campaign_objective_validator_node.py",
+        "persona_quality_checker_node.py",
+        "budget_classifier_node.py",
+        "channel_constraints_node.py",
+        "budget_checker_node.py",
+        "compliance_check_node.py",
+        "multi_variant_test(a_b)_node.py",
+        "channel_strategy_node.py",
+        "persona_quality_fallback_node.py",
+
+        "objective_refiner_node.py",
+        "persona_enrichment_node.py",
+        "fallback_persona_node.py",
+        "budget_alert_node.py",
+        "compliance_revision_node.py",
+        "multi_variant_test_branching_node.py",
+        "email_ad_generator_node.py",
+        "social_ad_generator_node.py",
+        "web_ad_generator.py",
+        "vide0_gen_Veo3_node.py",
+
         "__init__.py", "check_external_logs_node.py",
         "segmenting_node.py", "analytics_node.py",
         "generate_ad_node.py", "recommend_node.py",
@@ -46,7 +67,7 @@ folders_and_files = {
     ],
 
     "workflows/graphs/campaign/subgraphs": [
-        "persona_subgraph.py", "strategy_subgraph.py"
+        "persona_subgraph.py", "strategy_subgraph.py", "validation_subgraph.py", "fallback_subgraph.py", "media_ad_gen_subgraph.py"
     ],
 
     "workflows/graphs/campaign/prompts": ["segment_prompt.py", "ad_prompt.py", "recommendation_prompt.py", "human_in_the_loop_prompt.py"],
