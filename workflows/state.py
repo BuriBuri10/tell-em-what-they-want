@@ -1,4 +1,3 @@
-
 from enum import Enum
 from typing import Annotated, Optional, List, Literal, Dict, Any
 from pydantic import BaseModel, Field
@@ -31,6 +30,13 @@ class GraphState(BaseModel):
     user_profile: Annotated[Optional[str], Reducer.update] = None
     campaign_goal: Annotated[Optional[str], Reducer.update] = None
     campaign_objective: Annotated[Optional[str], Reducer.update] = None
+    channel_constraints_approved: Annotated[Optional[bool], Reducer.update] = None
+
+
+    ad_variants: Annotated[Optional[List[str]], Reducer.update] = None  # For A/B testing output
+    reviewed_ads: Annotated[Optional[List[Dict]], Reducer.update] = None  # For storing human-reviewed ads
+    final_ad: Annotated[Optional[str], Reducer.update] = None
+    requires_revision: Annotated[Optional[bool], Reducer.update] = None
 
     # Conversation context
     conversation_history: Annotated[
@@ -58,6 +64,10 @@ class GraphState(BaseModel):
     strategy_recommendation: Annotated[Optional[str], Reducer.update] = None
     recommended_channels: Annotated[Optional[List[str]], Reducer.update] = Field(default_factory=list)
     campaign_recommendation: Annotated[Optional[str], Reducer.update] = None
+    recommendation_diff: Annotated[Optional[str], Reducer.update] = None
+    recommendation: Annotated[Optional[str], Reducer.update] = None
+    previous_recommendation: Annotated[Optional[str], Reducer.update] = None
+
 
     # ab testing
     multi_variant_required: Annotated[Optional[bool], Reducer.update] = False

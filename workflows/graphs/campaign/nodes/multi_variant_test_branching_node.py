@@ -71,7 +71,7 @@ if __name__ == "__main__":
             generated_ad_content="Track your workouts and crush your goals with our new app!",
         )
 
-        node = MultiVariantTestNode()
+        node = ABTestingNode()
         updated_state = await node.process(test_state)
 
         print("\nAd Variants Generated:\n")

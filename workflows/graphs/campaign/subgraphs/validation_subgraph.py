@@ -12,6 +12,7 @@ from workflows.graphs.campaign.nodes.campaign_objective_validator_node import Ca
 from workflows.graphs.campaign.nodes.persona_quality_checker_node import PersonaQualityCheckerNode
 from workflows.graphs.campaign.nodes.budget_classifier_node import BudgetClassifierNode
 from workflows.graphs.campaign.nodes.channel_constraints_node import ChannelConstraintsNode
+from workflows.graphs.campaign.nodes.human_in_the_loop_node import HumanReviewRouter
 from workflows.graphs.campaign.nodes.objective_refiner_node import ObjectiveRefinerNode
 from workflows.graphs.campaign.nodes.persona_enrichment_node import PersonaEnrichmentNode
 from workflows.graphs.campaign.nodes.fallback_persona_node import FallbackPersonaNode
@@ -28,6 +29,7 @@ class ValidationWorkflow:
         self.persona_quality_checker_node = PersonaQualityCheckerNode()
         self.budget_classifier_node = BudgetClassifierNode()
         self.channel_constraints_node = ChannelConstraintsNode()
+        self.constraints_hitl = HumanReviewRouter()
         self.objective_refiner_node = ObjectiveRefinerNode()
         self.persona_enrichment_node = PersonaEnrichmentNode()
         self.fallback_persona_node = FallbackPersonaNode()
@@ -50,6 +52,7 @@ class ValidationWorkflow:
         validation_graph.add_node("persona_checker", self.persona_quality_checker_node.process)
         validation_graph.add_node("budget_classifier", self.budget_classifier_node.process)
         validation_graph.add_node("channel_constraints", self.channel_constraints_node.process)
+        validation_graph.add_node("constraints_hitl", self.constraints_hitl.process)
 
         # Add fallback/refinement nodes
         validation_graph.add_node("refine_objective", self.objective_refiner_node.process)
@@ -96,7 +99,8 @@ class ValidationWorkflow:
         validation_graph.add_edge("fallback_persona", "channel_constraints")
 
         # End after channel constraint check
-        validation_graph.add_edge("channel_constraints", END)
+        validation_graph.add_edge("channel_constraints", "constraints_hitl")
+        validation_graph.add_edge("constraints_hitl", END)
 
         return validation_graph.compile()
 

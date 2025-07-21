@@ -22,7 +22,6 @@ class RecommendNode:
             structured_output=None
         )["default"]
 
-
         logger.info("RecommendNode initialized with inline prompt chain.")
 
     async def process(self, state: GraphState) -> GraphState:
@@ -62,6 +61,26 @@ class RecommendNode:
 
             Respond in a structured, concise, and professional tone.
             """.strip()
+
+            # Include human feedback if available
+            ad_text = state.generated_ad or ""
+            feedback = state.ad_feedback or ""
+
+            if feedback:
+                prompt_text += f"""
+                --- Feedback from Human Review ---
+                The following ad was generated earlier:
+                "{ad_text}"
+
+                The user has provided the following feedback:
+                "{feedback}"
+
+                Please revise the campaign strategy considering this feedback.
+                """
+ 
+            # Store previous recommendation (if any)
+            if state.recommendation:
+                state.previous_recommendation = state.recommendation
 
             result: str = await self.chain.ainvoke({"input": prompt_text})
 

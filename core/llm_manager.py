@@ -5,7 +5,7 @@ from langchain_core.language_models import BaseLanguageModel
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
 # from langchain_anthropic import ChatAnthropic
-# from langchain_google_ai import ChatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 from configs.app_config import AppConfig
 from logs.logging_config import logger
@@ -49,13 +49,13 @@ class LLMProviderFactory:
     #         **overrides
     #     )
 
-    # def _init_gemini(self, temperature: float, **overrides) -> BaseLanguageModel:
-    #     return ChatGoogleGenerativeAI(
-    #         model=self.config.GEMINI_MODEL_NAME,
-    #         api_key=self.config.get("GEMINI_API_KEY"),
-    #         temperature=temperature,
-    #         **overrides
-    #     )
+    def _init_gemini(self, temperature: float, **overrides) -> BaseLanguageModel:
+        return ChatGoogleGenerativeAI(
+            model=self.config.GEMINI_MODEL_NAME,
+            api_key=self.config.get("GEMINI_API_KEY"),
+            temperature=temperature,
+            **overrides
+        )
 
     def create_llm(
         self,
@@ -73,7 +73,7 @@ class LLMProviderFactory:
             "groq": self._init_groq,
             # "openai": self._init_openai,
             # "anthropic": self._init_anthropic,
-            # "gemini": self._init_gemini
+            "gemini": self._init_gemini
         }
 
         if provider not in provider_map:

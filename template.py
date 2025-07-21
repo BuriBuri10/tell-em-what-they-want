@@ -16,7 +16,7 @@ folders_and_files = {
         "__init__.py", "llm_manager.py", "chain.py", "prompt_templates.py",
         "segmentation_engine.py", "recommendation_engine.py", "ad_generator.py"
     ],
-    "core/utils": ["campaign_recs.py"],
+    "core/utils": ["campaign_recs.py", "review_scorer.py"],
 
     "data_preprocessing_pipeline": [
         "__init__.py", "user_data_analyzer.py", "data_cleaner.py", "utils.py"
@@ -44,7 +44,7 @@ folders_and_files = {
         "channel_constraints_node.py",
         "budget_checker_node.py",
         "compliance_check_node.py",
-        "multi_variant_test(a_b)_node.py",
+        "is_ab_testing_needed_node.py",
         "channel_strategy_node.py",
         "persona_quality_fallback_node.py",
 
@@ -56,7 +56,7 @@ folders_and_files = {
         "multi_variant_test_branching_node.py",
         "email_ad_generator_node.py",
         "social_ad_generator_node.py",
-        "web_ad_generator.py",
+        "web_ad_generator_node.py",
         "vide0_gen_Veo3_node.py",
 
         "__init__.py", "check_external_logs_node.py",

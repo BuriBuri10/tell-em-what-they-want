@@ -101,11 +101,13 @@ class CampaignWorkflow:
                 }
             )
         campaign_graph.add_edge("ab_testing", "human_review")
+        campaign_graph.add_conditional_edges("human_review", lambda x: x.requires_revision, {True: "recommend", False: "feedback_loop"})
 
         # # If human review and feedback loop come after media_ad_generation:
         # campaign_graph.add_edge("generate_ad", "media_ad_generation")
         # campaign_graph.add_edge("media_ad_generation", "human_review")
-        campaign_graph.add_edge("human_review", "feedback_loop")
+
+        # campaign_graph.add_edge("human_review", "feedback_loop")
         campaign_graph.add_edge("feedback_loop", END)
 
         # # Final edge if no post-generation steps

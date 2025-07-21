@@ -1,0 +1,1097 @@
+2025-07-22 00:04:47.361 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 00:04:47.362 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 00:04:47.362 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 00:04:47.364 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:47.752 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:47.753 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 00:04:47.754 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:48.057 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:48.058 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 00:04:48.058 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:48.360 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:48.360 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 00:04:48.360 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:48.688 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:48.689 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 00:04:48.689 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:49.022 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:49.023 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 00:04:49.023 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 00:04:49.023 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:49.333 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:49.334 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 00:04:49.334 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:24 - Initializing ValidationWorkflow...
+2025-07-22 00:04:49.334 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:49.649 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:49.650 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 00:04:49.650 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:49.951 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:49.952 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 00:04:49.952 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:50.257 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:50.258 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 00:04:50.258 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:50.579 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:50.579 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 00:04:50.579 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:50.907 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:50.907 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 00:04:50.908 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:51.237 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:51.237 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 00:04:51.238 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:51.553 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:51.554 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 00:04:51.565 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 00:04:51.566 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:51.924 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:51.925 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 00:04:51.925 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:52.235 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:52.236 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 00:04:52.237 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:04:52.570 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:04:52.570 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 00:04:52.594 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 00:04:52.595 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=u, query='apple welcome kits'
+2025-07-22 00:05:24.868 | ERROR    | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:151 - Objective validation failed: Error code: 500 - {'error': {'message': 'Internal Server Error', 'type': 'internal_server_error'}}
+2025-07-22 00:14:20.095 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 00:14:20.095 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 00:14:20.095 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 00:14:20.097 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:20.489 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:20.489 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 00:14:20.489 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:20.793 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:20.793 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 00:14:20.793 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:21.096 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:21.096 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 00:14:21.096 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:21.411 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:21.412 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 00:14:21.412 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:21.727 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:21.727 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 00:14:21.727 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 00:14:21.727 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:22.027 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:22.027 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 00:14:22.027 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:24 - Initializing ValidationWorkflow...
+2025-07-22 00:14:22.027 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:22.334 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:22.335 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 00:14:22.335 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:22.639 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:22.640 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 00:14:22.640 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:22.941 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:22.942 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 00:14:22.942 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:23.239 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:23.240 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 00:14:23.240 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:23.548 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:23.548 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 00:14:23.548 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:23.855 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:23.855 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 00:14:23.856 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:24.155 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:24.155 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 00:14:24.166 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 00:14:24.167 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:24.470 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:24.471 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 00:14:24.471 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:24.771 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:24.772 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 00:14:24.772 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:14:25.075 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:14:25.075 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 00:14:25.095 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 00:14:25.095 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=u, query='apple welcome kits'
+2025-07-22 00:14:28.121 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:148 - Objective validation result: invalid. 
+
+the campaign objective mentions gen z users, but the persona description mentions a young professional interested in tech and fitness, which may not necessarily align with gen z. additionally, the persona does not specifically mention gen z. 
+
+however, assuming gen z and young professional overlap, a more precise objective would reference the persona directly: 
+
+ revised:  promote the new ai-powered smartwatch to young professionals interested in tech and fitness.
+
+given the information: 
+the best answer is invalid.
+2025-07-22 00:14:35.796 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:process:52 - Refined Objective: "Increase awareness and drive pre-orders of the AI-powered smartwatch among young professionals aged 20-30 who prioritize fitness and tech, highlighting its unique features and health tracking capabilities."
+2025-07-22 00:14:38.345 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:process:61 - Persona quality check result: based on the provided user persona:
+
+ description: young professional interested in tech and fitness
+ age range: 
+ interests: 
+
+the persona lacks specific details in several areas:
+
+- it does not include specific demographic details such as age, which is crucial for understanding the target audience. although it mentions an "age range" and "interests," these are left blank.
+- it mentions interests (tech and fitness), which aligns with one of the criteria but does not provide enough detail on its own to consider the persona complete.
+- there is no mention of a platform/channel or preference.
+
+given these observations, the persona does not meet the specified criteria comprehensively. therefore, i would rate it as:
+
+poor
+2025-07-22 00:14:40.276 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:process:58 - Enriched Persona: The enriched persona is: 
+"Alex, a 25-year-old urban professional based in major cities like New York, San Francisco, or London, who is highly interested in the intersection of technology and fitness. With a strong educational background in computer science or related fields, Alex values innovation and is always on the lookout for the latest gadgets. In their free time, Alex enjoys running, hiking, and practicing yoga, often sharing their fitness journey on social media platforms like Instagram and Facebook. Alex is active on tech forums and blogs, frequently reading reviews and articles on the latest smartwatches and fitness trackers. When making purchasing decisions, Alex tends to research extensively online, comparing features and prices before making a buy, often relying on recommendations from friends, family, or online influencers. Alex prioritizes health and wellness, is health-conscious, and seeks products that can help track fitness metrics and provide insights to improve their lifestyle. They are likely to engage with content that highlights product reviews, comparisons, and user experiences, and are interested in exploring how AI-powered technology can enhance their fitness and health tracking experience."
+2025-07-22 00:14:40.836 | WARNING  | workflows.graphs.campaign.nodes.budget_classifier_node:process:53 - Unexpected budget classification: to classify the marketing campaign's budget, i need information about the campaign. you've provided none. 
+
+however, based on your instruction to assume 'budget' if unclear, i'll respond with:
+
+budget
+2025-07-22 00:14:40.836 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:process:57 - Budget classified as: budget
+2025-07-22 00:14:41.392 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:process:48 - Fallback Persona Applied: The target persona is a health-conscious, tech-savvy individual in their mid-to-late twenties who values fitness and wellness, is interested in staying up-to-date with the latest technology, and is likely to be active on social media and online platforms, with a focus on discovering innovative products that can enhance their lifestyle.
+2025-07-22 00:15:13.385 | ERROR    | workflows.graphs.campaign.nodes.channel_constraints_node:process:68 - Constraint extraction failed: Error code: 500 - {'error': {'message': 'Internal Server Error', 'type': 'internal_server_error'}}
+2025-07-22 00:15:13.387 | ERROR    | __main__:run:240 - Workflow run failed: 1 validation error for GraphState
+channel_constraints
+  Input should be a valid dictionary [type=dict_type, input_value='No constraints', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/dict_type
+2025-07-22 00:27:58.452 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 00:27:58.454 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 00:27:58.454 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 00:27:58.456 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:27:58.836 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:27:58.836 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 00:27:58.837 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:27:59.152 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:27:59.152 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 00:27:59.152 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:27:59.454 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:27:59.454 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 00:27:59.454 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:27:59.762 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:27:59.762 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 00:27:59.762 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:00.071 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:00.072 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 00:28:00.072 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 00:28:00.072 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:00.379 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:00.379 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 00:28:00.379 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:24 - Initializing ValidationWorkflow...
+2025-07-22 00:28:00.380 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:00.687 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:00.687 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 00:28:00.687 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:00.992 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:00.992 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 00:28:00.992 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:01.302 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:01.302 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 00:28:01.302 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:01.605 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:01.607 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 00:28:01.607 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:01.908 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:01.909 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 00:28:01.909 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:02.211 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:02.211 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 00:28:02.211 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:02.535 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:02.535 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 00:28:02.548 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 00:28:02.548 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:02.909 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:02.910 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 00:28:02.910 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:03.252 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:03.252 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 00:28:03.253 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:28:03.588 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:28:03.588 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 00:28:03.611 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 00:28:03.611 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=a, query='apple welcome kit'
+2025-07-22 00:28:04.300 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:148 - Objective validation result: invalid. 
+
+reasoning: the campaign objective mentions promoting the ai-powered smartwatch to gen z users, but the persona description focuses on a young professional interested in tech and fitness. gen z is a broad age range (roughly 1997-2012), whereas the persona seems to target a more specific demographic (young professionals). the objective should ideally target young professionals specifically, rather than a broader age group.
+2025-07-22 00:28:04.587 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:process:52 - Refined Objective: "Increase brand awareness and drive pre-orders among young professionals aged 20-30 who are interested in wearable technology and fitness tracking, highlighting the AI-powered smartwatch's unique features and health monitoring capabilities."
+2025-07-22 00:28:05.198 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:process:61 - Persona quality check result: based on the provided user persona:
+
+ description: young professional interested in tech and fitness
+ age range: 
+ interests: 
+
+the persona lacks specific details in several areas:
+
+- it does not include specific demographic details such as age, which is crucial for understanding the target audience. although it mentions an "age range," the actual range is not provided.
+- it mentions interests (tech and fitness), which fulfills one criterion.
+- there is no mention of a platform/channel or preference.
+
+given these observations, the persona does not meet the criteria for completeness as it stands because it:
+
+1. fails to provide specific demographic details (e.g., age).
+2. does mention interests but lacks specificity in other areas.
+3. does not mention platform/channel or preference.
+
+therefore, the completeness of the user persona is "poor".
+2025-07-22 00:28:05.873 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:process:58 - Enriched Persona: The enriched persona is: 
+Alex, a 25-year-old urban professional based in major cities like New York, San Francisco, or London, holds a bachelor's degree in a field like computer science, business, or engineering. In their free time, Alex enjoys running, hiking, and practicing yoga, while also staying updated on the latest tech trends and innovations. They are active on social media platforms such as Instagram, Twitter, and LinkedIn, often engaging with fitness and tech influencers. Alex values health and wellness, prioritizing smart and efficient lifestyle choices. When making purchasing decisions, Alex researches products thoroughly online, reads reviews, and compares features before making a buy, often relying on recommendations from friends, family, or online forums. They are excited about wearable technology and fitness tracking, seeking devices that offer accurate health monitoring, long battery life, and seamless integration with their smartphone. Alex is likely to pre-order a product that showcases cutting-edge AI-powered features and offers exclusive benefits or early access to new technology.
+2025-07-22 00:28:06.170 | WARNING  | workflows.graphs.campaign.nodes.budget_classifier_node:process:53 - Unexpected budget classification: to classify the marketing campaign's budget, i need information about the campaign. you've provided none. 
+
+however, based on your instruction to assume 'budget' if unclear, i'll respond with:
+
+budget
+2025-07-22 00:28:06.171 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:process:57 - Budget classified as: budget
+2025-07-22 00:28:06.498 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:process:48 - Fallback Persona Applied: The target user persona is a health-conscious individual, likely a young adult in their 20s or early 30s, who values fitness and wellness, is interested in technology and innovation, and is actively seeking a reliable and feature-rich smartwatch to track their daily activities and monitor their health.
+2025-07-22 00:28:06.853 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:process:65 - Constraints extracted: **Campaign Constraints Analysis**
+
+After reviewing the provided instructions, the following constraints were identified:
+
+* None
+
+**Constraints List:**
+ 
+* No constraints 
+
+Since no constraints were provided, the response is:
+
+**No constraints**
+2025-07-22 00:28:06.855 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:process:32 - No external logs. Routing to segmentation only.
+2025-07-22 00:28:07.103 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-22 00:28:07.104 | ERROR    | workflows.graphs.campaign.nodes.recommend_node:process:95 - Recommendation generation failed: 'GraphState' object has no attribute 'recommendation'
+2025-07-22 00:28:07.105 | DEBUG    | workflows.graphs.campaign.nodes.generate_ad_node:process:34 - user_segment: premium, strategy: None
+2025-07-22 00:28:07.105 | WARNING  | workflows.graphs.campaign.nodes.generate_ad_node:process:35 - Missing user segment or campaign recommendation; falling back to defaults.
+2025-07-22 00:28:07.586 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 00:28:07.588 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/a_2025-07-22_00-28-07.txt
+2025-07-22 00:28:08.596 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 00:28:09.089 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 00:28:09.671 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 00:28:09.877 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: yes
+2025-07-22 00:28:10.640 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:process:55 - Multi-variant test content generated.
+2025-07-22 00:28:10.641 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Here are two alternative versions of the ad content for A/B testing:
+2025-07-22 00:28:10.642 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: 1. **Version 1: Emphasizing Innovation and Exclusivity**
+2025-07-22 00:28:10.642 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Unlock the Future of Fitness with Our Elite Smartwatch - Experience the Cutting-Edge of Wellness Technology
+2025-07-22 00:28:10.642 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: This version maintains the premium tone while emphasizing the innovative aspect of the product, appealing to the target persona's interest in technology and innovation. The hook is more specific, and the language is more futuristic.
+2025-07-22 00:28:10.642 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: 2. **Version 2: Focusing on Personal Achievement and Empowerment**
+2025-07-22 00:28:10.643 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Upgrade Your Active Lifestyle with Our Top-of-the-Line Smartwatch - Achieve Your Fitness Goals with Precision and Style
+2025-07-22 00:28:10.643 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: This version takes a more motivational approach, focusing on the target persona's desire for fitness and wellness. The language is more empowering, and the emphasis is on achieving personal goals, which resonates with the health-conscious and fitness-oriented individual. The CTA is more aspirational, encouraging the user to upgrade their lifestyle.
+2025-07-22 00:28:10.643 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Both versions maintain the same intent of promoting high-end exclusive products for premium buyers while varying in tone, hook, and CTA.
+2025-07-22 00:28:10.643 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:57 - Human review completed and forced.
+2025-07-22 00:32:31.317 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:81 - No feedback provided. Proceeding without revision.
+2025-07-22 00:32:47.625 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 00:32:47.625 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 00:32:47.626 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 00:32:47.628 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:48.007 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:48.008 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 00:32:48.008 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:48.311 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:48.311 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 00:32:48.311 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:48.622 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:48.623 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 00:32:48.623 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:48.926 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:48.927 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 00:32:48.927 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:49.230 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:49.231 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 00:32:49.232 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 00:32:49.232 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:49.557 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:49.558 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 00:32:49.558 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:24 - Initializing ValidationWorkflow...
+2025-07-22 00:32:49.558 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:49.859 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:49.860 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 00:32:49.860 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:50.172 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:50.173 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 00:32:50.173 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:50.479 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:50.480 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 00:32:50.480 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:50.793 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:50.794 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 00:32:50.794 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:51.098 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:51.099 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 00:32:51.099 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:51.412 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:51.413 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 00:32:51.413 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:51.719 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:51.719 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 00:32:51.731 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 00:32:51.731 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:52.037 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:52.037 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 00:32:52.038 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:52.341 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:52.342 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 00:32:52.343 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:32:52.647 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:32:52.648 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 00:32:52.669 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 00:32:52.669 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=a, query='apple welcome kit'
+2025-07-22 00:32:53.472 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:148 - Objective validation result: invalid. 
+
+the campaign objective mentions gen z users, but the persona description mentions young professionals interested in tech and fitness, which may not necessarily align with gen z. additionally, the persona does not specifically mention gen z. 
+
+however, assuming gen z can be a subset of young professionals, a more precise objective would be: 
+
+"promote the new ai-powered smartwatch to young professionals interested in tech and fitness."
+
+a one-word answer based on the original objective: invalid.
+2025-07-22 00:32:53.767 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:process:52 - Refined Objective: "Increase brand awareness and drive sales of the AI-powered smartwatch among young professionals aged 20-30 who prioritize fitness and technology, by highlighting its unique features and health monitoring capabilities."
+2025-07-22 00:32:54.499 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:process:61 - Persona quality check result: the user persona provided is:
+
+ description: young professional interested in tech and fitness
+ age range: 
+ interests: 
+
+given the criteria for evaluation:
+
+1. **includes demographic details (e.g., age, region)**: the persona lacks specific demographic details such as age range and region.
+2. **mentions at least one interest or behavioral trait**: it mentions interests in tech and fitness, which fulfills this criterion.
+3. **mentions platform/channel or preference**: there is no mention of a preferred platform, channel, or any other preference.
+
+based on the information provided and the criteria:
+
+- the persona does not include specific demographic details.
+- it does mention interests.
+- it does not mention a platform or preference.
+
+since it fails to meet two out of the three criteria effectively (lacking in demographic details and platform/channel or preference), the completeness of the user persona is considered **poor**.
+2025-07-22 00:32:55.142 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:process:58 - Enriched Persona: The enriched persona description is: 
+"Alex, a 25-year-old urban-dwelling professional, is tech-savvy and passionate about fitness. With a keen interest in innovative gadgets, Alex regularly follows tech blogs and fitness influencers on Instagram and LinkedIn. When not working, Alex enjoys running, hiking, and trying out new workout routines. This young professional values health and wellness, often seeking out products that can help track and improve their fitness goals. Alex is active online, frequently reading reviews and comparing products before making a purchase, typically on weekends, after thorough research. They prioritize functionality, ease of use, and sleek designs when buying fitness-related gear, often willing to invest in premium products that offer advanced features and reliable performance."
+2025-07-22 00:32:55.623 | WARNING  | workflows.graphs.campaign.nodes.budget_classifier_node:process:53 - Unexpected budget classification: to classify the marketing campaign's budget, i need information about the campaign. you've provided none. 
+
+however, based on your instruction to assume 'budget' if unclear, i'll respond with:
+
+budget
+2025-07-22 00:32:55.625 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:process:57 - Budget classified as: budget
+2025-07-22 00:32:56.108 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:process:48 - Fallback Persona Applied: The target user persona is a health-conscious, tech-savvy individual in their mid-to-late twenties who values fitness and is interested in leveraging technology to track and improve their well-being.
+2025-07-22 00:32:56.685 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:process:65 - Constraints extracted: **Campaign Constraints Analysis**
+
+After reviewing the provided instructions, the following constraints were identified:
+
+* None
+
+**Constraints List:**
+ 
+* No constraints 
+
+Since no constraints were provided, the response is:
+
+**No constraints**
+2025-07-22 00:32:56.687 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:process:32 - No external logs. Routing to segmentation only.
+2025-07-22 00:32:57.053 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-22 00:32:58.765 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:92 - Campaign recommendation generated successfully.
+2025-07-22 00:32:59.310 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 00:32:59.313 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/a_2025-07-22_00-32-59.txt
+2025-07-22 00:33:00.535 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 00:33:00.867 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 00:33:01.358 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 00:33:01.583 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: no
+2025-07-22 00:33:01.585 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Unlock Exclusive Experiences: Discover our curated selection of high-end, luxury products, tailored to your refined tastes. As a valued premium buyer, enjoy personalized services, early access to new arrivals, and VIP events. Join Our Premium Community and elevate your lifestyle with the finest brands and experiences.
+2025-07-22 00:33:01.585 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:57 - Human review completed and forced.
+2025-07-22 00:33:42.337 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:67 - Captured human feedback: KPIs for all the variants
+2025-07-22 00:33:45.081 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:76 - Marked for revision based on feedback.
+2025-07-22 00:33:47.229 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:92 - Campaign recommendation generated successfully.
+2025-07-22 00:33:47.801 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 00:33:47.803 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/a_2025-07-22_00-33-47.txt
+2025-07-22 00:33:49.001 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 00:33:49.611 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 00:33:50.430 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 00:33:50.840 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: no
+2025-07-22 00:33:50.841 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Unlock Your Exclusive Access to the World's Most Coveted Luxury Products. Experience the art of fine living with our curated selection of high-end goods, from rare designer pieces to bespoke services. As a premium buyer, discover new arrivals before anyone else, enjoy personalized styling, and get invited to VIP events that redefine the luxury experience. Elevate your lifestyle with the finest, only available to those who appreciate the extraordinary.
+2025-07-22 00:33:50.842 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:57 - Human review completed and forced.
+2025-07-22 00:34:12.464 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:81 - No feedback provided. Proceeding without revision.
+2025-07-22 00:34:12.466 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:39 - Selected final ad after feedback loop: Unlock Your Exclusive Access to the World's Most Coveted Luxury Products. Experience the art of fine living with our curated selection of high-end goods, from rare designer pieces to bespoke services. As a premium buyer, discover new arrivals before anyone else, enjoy personalized styling, and get invited to VIP events that redefine the luxury experience. Elevate your lifestyle with the finest, only available to those who appreciate the extraordinary.
+2025-07-22 00:34:14.680 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:68 - Feedback processed and analyzed successfully.
+2025-07-22 00:34:14.682 | INFO     | __main__:_save_campaign_report:206 - Campaign report saved: campaign_outputs/a_2025-07-22_00-34-14.txt
+2025-07-22 00:34:14.688 | WARNING  | __main__:get_graph_structure:168 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-22 00:34:15.426 | INFO     | __main__:main:271 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-22 00:36:10.774 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 00:36:10.774 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 00:36:10.776 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 00:36:10.777 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:11.229 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:11.229 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 00:36:11.230 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:11.533 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:11.533 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 00:36:11.533 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:11.835 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:11.835 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 00:36:11.835 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:12.140 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:12.140 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 00:36:12.140 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:12.454 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:12.455 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 00:36:12.455 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 00:36:12.455 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:12.769 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:12.770 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 00:36:12.770 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:24 - Initializing ValidationWorkflow...
+2025-07-22 00:36:12.770 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:13.098 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:13.098 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 00:36:13.099 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:13.406 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:13.406 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 00:36:13.406 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:13.722 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:13.723 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 00:36:13.723 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:14.029 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:14.029 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 00:36:14.029 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:14.338 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:14.339 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 00:36:14.339 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:14.648 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:14.648 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 00:36:14.648 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:14.958 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:14.959 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 00:36:14.971 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 00:36:14.971 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:15.273 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:15.274 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 00:36:15.274 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:15.579 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:15.579 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 00:36:15.580 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:36:15.881 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:36:15.882 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 00:36:15.902 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 00:36:15.903 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=iug, query='apple welcome kit'
+2025-07-22 00:36:16.541 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:148 - Objective validation result: invalid. 
+
+the campaign objective mentions gen z users, but the persona description mentions a young professional interested in tech and fitness, which may not necessarily align with gen z. additionally, the persona does not specifically mention age, so gen z is an assumption. a more aligned objective would target young professionals interested in tech and fitness.
+2025-07-22 00:36:16.858 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:process:52 - Refined Objective: "Increase brand awareness and drive pre-orders among young professionals aged 20-30 who are interested in wearable technology and fitness tracking, highlighting the AI-powered smartwatch's unique features and health monitoring capabilities."
+2025-07-22 00:36:17.436 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:process:61 - Persona quality check result: based on the provided user persona:
+
+ description: young professional interested in tech and fitness
+ age range: 
+ interests: 
+
+the persona lacks specific details in several areas:
+
+- it does not include specific demographic details such as age, which is crucial for understanding the target audience.
+- it mentions interests (tech and fitness) but could be more detailed for a richer persona.
+- there is no mention of a platform/channel or preference.
+
+given these observations, the persona does not meet the criteria as it stands because:
+
+1. it does not provide a specific age range, which is a demographic detail.
+2. while it mentions interests, it could be considered a start for behavioral traits.
+3. it completely lacks information on platform/channel or preference.
+
+therefore, the completeness of the provided user persona is "poor".
+2025-07-22 00:36:18.169 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:process:58 - Enriched Persona: {'description': 'Alex, a 25-year-old urban professional based in major cities like New York, London, or Tokyo, with a strong interest in wearable technology, fitness tracking, and health monitoring. They enjoy staying active through running, yoga, and hiking, and are curious about leveraging AI-powered tools to optimize their workouts and daily routines. In their free time, Alex likes to read about the latest tech trends, try out new fitness classes, and explore healthy food options. They are active on social media platforms such as Instagram, Twitter, and LinkedIn, often engaging with fitness and tech influencers, and staying updated on the latest industry news. When it comes to buying, Alex values convenience, researching products online, reading reviews, and comparing features before making a purchase. They prioritize products that offer a seamless user experience, innovative features, and a strong brand reputation. With a medium to high disposable income, Alex is willing to invest in products that align with their interests and values, and is likely to pre-order new products that showcase cutting-edge technology and design.'}
+2025-07-22 00:36:18.679 | WARNING  | workflows.graphs.campaign.nodes.budget_classifier_node:process:53 - Unexpected budget classification: to classify the marketing campaign's budget, i need information about the campaign. you've provided none. 
+
+however, based on your instruction to assume 'budget' if unclear, i'll respond with:
+
+budget
+2025-07-22 00:36:18.680 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:process:57 - Budget classified as: budget
+2025-07-22 00:36:19.080 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:process:48 - Fallback Persona Applied: The target user persona is a health-conscious, tech-savvy individual, likely with a college education and an interest in staying active and connected, who values innovative wearable technology and seeks to track and improve their overall well-being.
+2025-07-22 00:36:19.369 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:process:65 - Constraints extracted: **Campaign Constraints Analysis**
+
+After reviewing the provided instructions, the following constraints were identified:
+
+* None
+
+**Constraints List:**
+ 
+* No constraints 
+
+Since no constraints were provided, the response is:
+
+**No constraints**
+2025-07-22 00:36:19.371 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:process:32 - No external logs. Routing to segmentation only.
+2025-07-22 00:36:19.626 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: standard
+2025-07-22 00:36:20.969 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:92 - Campaign recommendation generated successfully.
+2025-07-22 00:36:21.327 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 00:36:21.328 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/iug_2025-07-22_00-36-21.txt
+2025-07-22 00:36:22.369 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 00:36:22.776 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 00:36:23.295 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 00:36:23.501 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: yes
+2025-07-22 00:36:24.415 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:process:55 - Multi-variant test content generated.
+2025-07-22 00:36:24.416 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Here are two alternative versions of the ad content for A/B testing:
+2025-07-22 00:36:24.416 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: 1. **Version 1: Focus on Wellness Benefits**
+2025-07-22 00:36:24.416 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: "Unlock a healthier you with our everyday essentials. Explore how our products can help you stay on top of your fitness goals, track your progress, and feel your best. Join our community today and discover a smarter way to live!"
+2025-07-22 00:36:24.417 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: 2. **Version 2: Emphasize Exclusive Access**
+2025-07-22 00:36:24.417 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: "Get ahead of the curve with our latest innovations. As a valued customer, you'll enjoy early access to new products, exclusive promotions, and expert tips on optimizing your well-being. Sign up now and experience the future of wearable technology!"
+2025-07-22 00:36:24.417 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Both versions maintain the same intent of promoting general-purpose products to average customers, but vary in tone, hook, and CTA:
+2025-07-22 00:36:24.417 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: * Version 1 focuses on the wellness benefits of the products and uses a more aspirational tone.
+2025-07-22 00:36:24.417 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: * Version 2 emphasizes exclusive access to new products and promotions, using a more premium and exclusive tone.
+2025-07-22 00:36:24.417 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: These variations can help determine which approach resonates better with the target persona and drives more conversions.
+2025-07-22 00:36:24.418 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:57 - Human review completed and forced.
+2025-07-22 00:36:26.715 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:81 - No feedback provided. Proceeding without revision.
+2025-07-22 00:36:26.717 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:39 - Selected final ad after feedback loop: "Get ahead of the curve with our latest innovations. As a valued customer, you'll enjoy early access to new products, exclusive promotions, and expert tips on optimizing your well-being. Sign up now and experience the future of wearable technology!"
+2025-07-22 00:36:26.717 | WARNING  | workflows.graphs.campaign.nodes.feedback_loop_node:process:45 - No feedback provided for the ad.
+2025-07-22 00:36:26.719 | INFO     | __main__:_save_campaign_report:206 - Campaign report saved: campaign_outputs/iug_2025-07-22_00-36-26.txt
+2025-07-22 00:36:27.585 | WARNING  | __main__:get_graph_structure:170 - Pyppeteer render failed: Chromium downloadable not found at https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/1181205/chrome-win.zip: Received <?xml version='1.0' encoding='UTF-8'?><Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Details>No such object: chromium-browser-snapshots/Win_x64/1181205/chrome-win.zip</Details></Error>.
+
+2025-07-22 00:36:28.117 | INFO     | __main__:main:271 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-22 00:58:46.374 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 00:58:46.374 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 00:58:46.374 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 00:58:46.376 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:46.755 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:46.755 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 00:58:46.756 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:47.059 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:47.059 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 00:58:47.060 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:47.370 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:47.371 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 00:58:47.371 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:47.674 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:47.675 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 00:58:47.675 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:47.977 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:47.978 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 00:58:47.978 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 00:58:47.978 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:48.287 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:48.287 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 00:58:48.287 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:25 - Initializing ValidationWorkflow...
+2025-07-22 00:58:48.288 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:48.612 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:48.612 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 00:58:48.612 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:48.936 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:48.936 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 00:58:48.937 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:49.267 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:49.268 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 00:58:49.268 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:49.617 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:49.618 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 00:58:49.618 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 00:58:49.618 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:49.928 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:49.929 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 00:58:49.929 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:50.236 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:50.236 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 00:58:50.237 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 00:58:50.554 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 00:58:50.555 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 01:00:59.390 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 01:00:59.390 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 01:00:59.391 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 01:00:59.392 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:00:59.768 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:00:59.769 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 01:00:59.769 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:00.074 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:00.074 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 01:01:00.075 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:00.393 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:00.394 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 01:01:00.394 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:00.709 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:00.709 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 01:01:00.709 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:01.019 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:01.020 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 01:01:01.020 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 01:01:01.020 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:01.326 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:01.326 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 01:01:01.326 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:25 - Initializing ValidationWorkflow...
+2025-07-22 01:01:01.326 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:01.633 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:01.633 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 01:01:01.633 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:01.936 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:01.937 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 01:01:01.937 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:02.237 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:02.238 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 01:01:02.238 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:02.539 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:02.539 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 01:01:02.539 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 01:01:02.539 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:02.844 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:02.844 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 01:01:02.844 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:03.178 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:03.178 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 01:01:03.178 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:03.569 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:03.570 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 01:01:03.587 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 01:01:03.588 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:03.910 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:03.911 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 01:01:03.911 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:04.237 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:04.237 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 01:01:04.238 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:01:04.628 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:01:04.628 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 01:01:04.653 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 01:01:04.653 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=iug, query='apple welcome kit'
+2025-07-22 01:01:05.705 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:148 - Objective validation result: invalid. 
+
+the campaign objective mentions gen z users, but the persona description mentions young professionals interested in tech and fitness, which may not necessarily align with gen z. additionally, the persona does not specifically mention gen z. 
+
+however, assuming gen z can be a subset of young professionals, a more precise objective would be: 
+
+"promote the new ai-powered smartwatch to young professionals interested in tech and fitness."
+
+a one-word answer based on the original objective: invalid.
+2025-07-22 01:01:06.504 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:process:52 - Refined Objective: "Increase brand awareness and drive sales of the AI-powered smartwatch among young professionals aged 20-30 who prioritize fitness and technology, by showcasing its unique features and health tracking capabilities."
+2025-07-22 01:01:07.580 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:process:61 - Persona quality check result: the user persona provided is:
+
+ description: young professional interested in tech and fitness
+ age range: 
+ interests: 
+
+given the criteria for evaluation:
+
+1. **includes demographic details (e.g., age, region):** the persona lacks specific demographic details such as age range and region.
+2. **mentions at least one interest or behavioral trait:** it mentions interests in tech and fitness, which fulfills this criterion.
+3. **mentions platform/channel or preference:** there is no mention of a preferred platform, channel, or any other preference.
+
+based on the information provided and the criteria for evaluation, the persona is missing crucial demographic details and information about platform/channel preferences. therefore, the completeness of the user persona is:
+
+**poor**
+2025-07-22 01:01:08.421 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:process:58 - Enriched Persona: The enriched persona is: 
+"Alex, a 25-year-old urban-dwelling professional, is tech-savvy and passionate about fitness. Residing in major cities such as New York, San Francisco, or London, Alex values staying connected and on top of the latest trends. In their free time, they enjoy hiking, attending fitness classes, and trying out new gadgets. Active on social media platforms like Instagram, TikTok, and LinkedIn, Alex follows popular fitness influencers and stays updated on the latest tech news. When making purchasing decisions, Alex researches products thoroughly online, reads reviews, and seeks recommendations from friends and family before making a buy. They prioritize products that seamlessly integrate technology and fitness, offering innovative features that enhance their active lifestyle. With a medium to high disposable income, Alex is willing to invest in premium products that deliver on their promises."
+2025-07-22 01:01:09.106 | WARNING  | workflows.graphs.campaign.nodes.budget_classifier_node:process:53 - Unexpected budget classification: to classify the marketing campaign's budget, i need information about the campaign. you've provided none. 
+
+however, based on your instruction to assume 'budget' if unclear, i'll respond with:
+
+budget
+2025-07-22 01:01:09.106 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:process:57 - Budget classified as: budget
+2025-07-22 01:01:09.821 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:process:48 - Fallback Persona Applied: The target user persona is a health-conscious, tech-savvy individual in their mid-to-late twenties who values fitness and is interested in exploring innovative wearable technology to track their well-being and enhance their active lifestyle.
+2025-07-22 01:01:11.141 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:process:65 - Constraints extracted: **Campaign Constraints Analysis**
+
+After reviewing the provided instructions, the following constraints were identified:
+
+* None
+
+**Constraints List:**
+ 
+* No constraints 
+
+Since no specific limitations or restrictions were mentioned, the campaign appears to have no platform or media constraints.
+2025-07-22 01:01:11.142 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: None
+2025-07-22 01:01:11.142 | ERROR    | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:112 - HumanReviewNode failed: object of type 'NoneType' has no len()
+2025-07-22 01:01:11.143 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:process:32 - No external logs. Routing to segmentation only.
+2025-07-22 01:01:12.984 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: standard
+2025-07-22 01:01:15.380 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:92 - Campaign recommendation generated successfully.
+2025-07-22 01:01:16.101 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 01:01:16.102 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/iug_2025-07-22_01-01-16.txt
+2025-07-22 01:01:17.982 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 01:01:18.541 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 01:01:20.260 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 01:01:20.901 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: no
+2025-07-22 01:01:20.903 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:51 - Reviewing ad variant: Upgrade Your Daily Life with Our General-Purpose Products! 
+
+Discover a world of convenience and efficiency with our versatile products, designed to make your everyday tasks easier. From home essentials to personal favorites, our products are crafted to help you live your best life. 
+
+Learn More and explore our range today! [Your Product Link]
+2025-07-22 01:01:20.903 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:57 - Human Review Forced....
+2025-07-22 01:06:20.828 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:68 - Channel constraints override: False
+2025-07-22 01:07:09.527 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 01:07:09.527 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 01:07:09.527 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 01:07:09.529 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:09.912 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:09.912 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 01:07:09.912 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:10.217 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:10.217 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 01:07:10.217 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:10.540 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:10.540 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 01:07:10.540 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:10.847 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:10.847 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 01:07:10.848 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:11.157 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:11.157 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 01:07:11.157 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 01:07:11.158 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:11.470 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:11.471 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 01:07:11.471 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:25 - Initializing ValidationWorkflow...
+2025-07-22 01:07:11.471 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:11.781 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:11.781 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 01:07:11.782 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:12.089 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:12.089 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 01:07:12.090 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:12.395 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:12.396 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 01:07:12.396 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:12.705 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:12.705 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 01:07:12.705 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 01:07:12.706 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:13.016 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:13.017 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 01:07:13.017 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:13.324 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:13.325 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 01:07:13.325 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:13.629 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:13.629 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 01:07:13.644 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 01:07:13.645 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:13.954 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:13.955 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 01:07:13.955 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:14.259 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:14.259 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 01:07:14.259 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:07:14.562 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:07:14.563 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 01:07:14.584 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 01:07:14.585 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=y, query='apple welcome kit'
+2025-07-22 01:07:15.515 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:148 - Objective validation result: invalid. 
+
+the campaign objective mentions gen z users, but the persona description mentions a young professional interested in tech and fitness, which may not necessarily align with gen z. additionally, the persona does not specifically mention gen z. 
+
+however, assuming gen z can be a subset of young professionals, a more precise objective would reference the persona directly: 
+
+ revised to: "valid" if revised as  "promote the new ai-powered smartwatch to young professionals interested in tech and fitness". 
+
+so one word answer is: invalid.
+2025-07-22 01:07:16.081 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:process:52 - Refined Objective: "Increase brand awareness and drive pre-orders among young professionals aged 20-30 who are interested in wearable technology and fitness tracking, highlighting the AI-powered smartwatch's unique features and health monitoring capabilities."
+2025-07-22 01:07:16.872 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:process:61 - Persona quality check result: based on the provided user persona:
+
+ description: young professional interested in tech and fitness
+ age range: 
+ interests: 
+
+the persona lacks specific details. here's the evaluation:
+
+- it does not include demographic details (e.g., age, region) as the age range and other specifics are left blank.
+- it mentions an interest or behavioral trait: being interested in tech and fitness.
+- it does not mention a platform/channel or preference.
+
+given these points, the persona does not meet the criteria for being complete, specifically failing to include demographic details and information about platform/channel or preference.
+
+respond with: "poor".
+2025-07-22 01:07:17.712 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:process:58 - Enriched Persona: {'description': 'Alex, a 25-year-old urban professional based in major cities like New York, London, or Tokyo, with a strong interest in wearable technology, fitness tracking, and health monitoring. They enjoy staying active through running, yoga, and hiking, and are curious about leveraging AI-powered tools to optimize their workouts and daily routines. In their free time, Alex likes to read about the latest tech trends, watch YouTube reviews on smart gadgets, and try out new fitness classes. They are active on social media platforms such as Instagram, Twitter, and LinkedIn, often engaging with content related to fitness, tech, and entrepreneurship. When it comes to buying decisions, Alex values product reviews, seeks recommendations from friends and online forums, and prioritizes features that enhance their fitness goals and overall well-being. They are likely to pre-order a product that showcases innovative AI-powered features, sleek design, and seamless integration with their existing fitness apps.'}
+2025-07-22 01:07:18.192 | WARNING  | workflows.graphs.campaign.nodes.budget_classifier_node:process:53 - Unexpected budget classification: to classify the marketing campaign's budget, i need information about the campaign. you've provided none. 
+
+however, based on your instruction to assume 'budget' if unclear, i'll respond with:
+
+budget
+2025-07-22 01:07:18.192 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:process:57 - Budget classified as: budget
+2025-07-22 01:07:18.911 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:process:48 - Fallback Persona Applied: The target user persona is a health-conscious, tech-savvy individual, likely with a college education and an interest in staying active and connected, who values innovative wearable technology and seeks to track and improve their overall well-being.
+2025-07-22 01:07:20.110 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:process:65 - Constraints extracted: **Campaign Constraints Analysis**
+
+After reviewing the provided instructions, the following constraints were identified:
+
+* None
+
+**Constraints List:**
+ 
+* No constraints 
+
+Since no constraints were provided, the response is:
+
+**No constraints**
+2025-07-22 01:07:20.111 | WARNING  | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:50 - No ads found for review. Skipping human review step.
+2025-07-22 01:07:20.112 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:process:32 - No external logs. Routing to segmentation only.
+2025-07-22 01:07:20.714 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-22 01:07:22.719 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:92 - Campaign recommendation generated successfully.
+2025-07-22 01:07:24.752 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 01:07:24.754 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/y_2025-07-22_01-07-24.txt
+2025-07-22 01:07:26.281 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 01:07:26.831 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 01:07:27.472 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 01:07:27.830 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: yes
+2025-07-22 01:07:28.718 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:process:55 - Multi-variant test content generated.
+2025-07-22 01:07:28.718 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: Here are two alternative versions of the ad content:
+2025-07-22 01:07:28.718 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: 1. **Version 1: Emphasizing Exclusivity and Personalization**
+2025-07-22 01:07:28.718 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: Experience the art of bespoke luxury, reserved for discerning individuals like yourself. As a valued premium buyer, gain exclusive access to our curated collection, featuring exquisite craftsmanship and cutting-edge technology. Your unique style and preferences have been carefully considered - explore our latest arrivals and discover a world of tailored elegance.
+2025-07-22 01:07:28.719 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: 2. **Version 2: Highlighting Innovation and Well-being**
+2025-07-22 01:07:28.719 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: Elevate your pursuit of wellness and sophistication with our latest luxury collection. Engineered for the modern connoisseur, our handcrafted wearable technology combines innovative design with unparalleled functionality. Unlock early access to our newest releases and discover a world where technology meets refined taste. Start your journey to refined well-being - explore now.
+2025-07-22 01:07:28.719 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: Both versions maintain the same intent of promoting high-end exclusive products for premium buyers, while varying in tone, hook, and CTA. Version 1 emphasizes exclusivity and personalization, while Version 2 highlights innovation and well-being.
+2025-07-22 01:07:28.720 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:61 - Human Review Forced....
+2025-07-22 01:07:50.034 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:72 - Channel constraints override: False
+2025-07-22 01:08:01.257 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:99 - No feedback provided. Proceeding without revision.
+2025-07-22 01:08:01.259 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:39 - Selected final ad after feedback loop: Experience the art of bespoke luxury, reserved for discerning individuals like yourself. As a valued premium buyer, gain exclusive access to our curated collection, featuring exquisite craftsmanship and cutting-edge technology. Your unique style and preferences have been carefully considered - explore our latest arrivals and discover a world of tailored elegance.
+2025-07-22 01:08:01.259 | WARNING  | workflows.graphs.campaign.nodes.feedback_loop_node:process:45 - No feedback provided for the ad.
+2025-07-22 01:08:01.260 | INFO     | __main__:_save_campaign_report:206 - Campaign report saved: campaign_outputs/y_2025-07-22_01-08-01.txt
+2025-07-22 01:08:01.264 | WARNING  | __main__:get_graph_structure:168 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-22 01:08:02.233 | INFO     | __main__:main:271 - Saved campaign graph structure as campaign_graph_structure.png
+2025-07-22 01:08:31.088 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 01:08:31.088 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 01:08:31.088 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 01:08:31.090 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:31.466 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:31.467 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 01:08:31.467 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:31.768 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:31.769 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 01:08:31.769 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:32.072 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:32.072 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 01:08:32.072 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:32.380 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:32.380 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 01:08:32.380 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:32.686 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:32.687 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 01:08:32.687 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 01:08:32.687 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:32.996 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:32.996 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 01:08:32.996 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:25 - Initializing ValidationWorkflow...
+2025-07-22 01:08:32.997 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:33.329 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:33.329 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 01:08:33.330 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:33.708 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:33.708 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 01:08:33.708 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:34.032 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:34.032 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 01:08:34.032 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:34.366 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:34.366 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 01:08:34.367 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 01:08:34.367 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:34.742 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:34.742 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 01:08:34.742 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:35.069 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:35.069 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 01:08:35.069 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:35.385 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:35.386 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 01:08:35.409 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 01:08:35.410 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:35.720 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:35.720 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 01:08:35.720 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:36.027 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:36.027 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 01:08:36.027 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:08:36.336 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:08:36.337 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 01:08:36.360 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 01:08:36.360 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=y, query='apple welcome kit'
+2025-07-22 01:08:38.147 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:148 - Objective validation result: invalid. 
+
+the campaign objective mentions gen z users, but the persona description mentions young professionals interested in tech and fitness, which may not necessarily align with gen z. additionally, the persona does not specifically mention gen z. 
+
+however, assuming gen z can be a subset of young professionals, a more precise objective would reference the persona directly: 
+
+ revised: promote the new ai-powered smartwatch to young professionals interested in tech and fitness.
+
+given the original objective: 
+one-word answer: invalid.
+2025-07-22 01:08:38.872 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:process:52 - Refined Objective: "Increase awareness and drive sales of the AI-powered smartwatch among young professionals aged 20-30 who prioritize fitness and technology, by highlighting its unique features and health tracking capabilities."
+2025-07-22 01:08:39.752 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:process:61 - Persona quality check result: based on the provided user persona:
+
+ description: young professional interested in tech and fitness
+ age range: 
+ interests: 
+
+the persona lacks specific details in several areas:
+
+- it does not include specific demographic details such as age, which is crucial for understanding the target audience.
+- while it mentions interests (tech and fitness), it does not provide any depth or specificity about these interests.
+- there is no mention of a preferred platform/channel.
+
+given these observations, the persona does not meet the criteria as it stands:
+
+- does not include demographic details.
+- while it mentions interests, it lacks specificity and depth.
+- does not mention platform/channel or preference.
+
+therefore, i would rate it as "poor".
+2025-07-22 01:08:41.462 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:process:58 - Enriched Persona: {'description': 'Alex, a 25-year-old urban-dwelling young professional, is tech-savvy and passionate about fitness. They live in a metropolitan area, likely in the United States or Europe, and enjoy staying active through running, yoga, and hiking. In their free time, Alex reads about the latest tech trends, watches YouTube reviews, and attends fitness events. They are active on social media platforms such as Instagram, Twitter, and LinkedIn, often engaging with fitness influencers and tech bloggers. Alex values convenience, innovation, and style when making purchasing decisions, typically researching products online, reading reviews, and comparing features before buying. They prioritize health and wellness, seeking products that can help them optimize their fitness routine and daily life. Alex is likely to invest in premium products that offer advanced features and sleek designs.'}
+2025-07-22 01:08:42.432 | WARNING  | workflows.graphs.campaign.nodes.budget_classifier_node:process:53 - Unexpected budget classification: to classify the marketing campaign's budget, i need information about the campaign. since no details are provided, i'll assume it's unclear and follow your instruction for such cases.
+
+budget
+2025-07-22 01:08:42.432 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:process:57 - Budget classified as: budget
+2025-07-22 01:08:42.910 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:process:48 - Fallback Persona Applied: The target persona is a tech-savvy young adult, likely a fitness enthusiast, who values innovation and is interested in health and wellness, and is active on various digital platforms, with a focus on individuals aged 20-30 who are likely to engage with and purchase smartwatch products.
+2025-07-22 01:08:43.564 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:process:65 - Constraints extracted: **Campaign Constraints Analysis**
+
+After reviewing the provided instructions, the following constraints were identified:
+
+* None
+
+**Constraints List:**
+ 
+* No constraints 
+
+Since no constraints were provided, the response is:
+
+**No constraints**
+2025-07-22 01:08:43.565 | WARNING  | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:50 - No ads found for review. Skipping human review step.
+2025-07-22 01:08:43.566 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:process:32 - No external logs. Routing to segmentation only.
+2025-07-22 01:08:44.552 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-22 01:08:48.948 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:92 - Campaign recommendation generated successfully.
+2025-07-22 01:08:50.329 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 01:08:50.330 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/y_2025-07-22_01-08-50.txt
+2025-07-22 01:08:51.961 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 01:08:52.749 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 01:08:54.170 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 01:08:54.831 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: yes
+2025-07-22 01:08:55.957 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:process:55 - Multi-variant test content generated.
+2025-07-22 01:08:55.958 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: Here are two alternative versions of the ad content:
+2025-07-22 01:08:55.958 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: 1. **Version 1: Emphasizing Exclusivity and Scarcity**
+2025-07-22 01:08:55.958 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: "Experience the art of exclusivity. As a discerning individual with a passion for innovation, you're invited to explore our carefully curated selection of high-end products. Only a select few will have access to our limited-edition releases, rare designer collaborations, and bespoke experiences. Join our elite club and enjoy personalized support, early access to new arrivals, and VIP invitations to events that will elevate your lifestyle. Don't miss your chance to be part of a privileged group. Apply now and unlock your exclusive benefits."
+2025-07-22 01:08:55.958 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: 2. **Version 2: Focusing on Personalization and Aspiration**
+2025-07-22 01:08:55.959 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: "Unlock a world tailored to your unique style. As a valued member of our premium community, you'll gain access to a handpicked selection of luxury products that reflect your aspirations. From cutting-edge smartwatches to exclusive designer collaborations, discover pieces that not only elevate your look but also fuel your passions. As a VIP member, you'll enjoy dedicated support, early access to new arrivals, and invitations to intimate events that will inspire and motivate you. Ready to upgrade your lifestyle? Get started now and experience the best of the best, personalized just for you."
+2025-07-22 01:08:55.959 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: Both versions maintain the same intent of promoting high-end exclusive products for premium buyers, but vary in tone, hook, and CTA:
+2025-07-22 01:08:55.959 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: * Version 1 emphasizes exclusivity and scarcity, creating a sense of FOMO (fear of missing out) to encourage applications.
+2025-07-22 01:08:55.959 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: * Version 2 focuses on personalization and aspiration, highlighting the benefits of being part of a premium community and the opportunity to upgrade one's lifestyle.
+2025-07-22 01:08:55.959 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:61 - Human Review Forced....
+2025-07-22 01:10:30.431 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:72 - Channel constraints override: False
+2025-07-22 01:12:13.255 | INFO     | __main__:__init__:30 - Initializing CampaignWorkflow...
+2025-07-22 01:12:13.256 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:__init__:14 - CheckExternalLogsNode initialized.
+2025-07-22 01:12:13.256 | INFO     | workflows.graphs.campaign.nodes.analytics_node:__init__:14 - AnalyticsNode initialized. Ready to process external user logs.
+2025-07-22 01:12:13.257 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:13.631 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:13.631 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:__init__:35 - UserSegmenter initialized with structured prompt.
+2025-07-22 01:12:13.631 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:13.934 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:13.934 | INFO     | workflows.graphs.campaign.nodes.recommend_node:__init__:25 - RecommendNode initialized with inline prompt chain.
+2025-07-22 01:12:13.935 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:14.237 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:14.238 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:__init__:22 - MultiVariantTestNode initialized.
+2025-07-22 01:12:14.238 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:14.540 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:14.540 | INFO     | workflows.graphs.campaign.nodes.multi_variant_test_branching_node:__init__:21 - MultiVariantTestNode initialized.
+2025-07-22 01:12:14.540 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:14.843 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:14.843 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:__init__:19 - GenerateAdNode initialized with inline prompt chain.
+2025-07-22 01:12:14.843 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 01:12:14.844 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:15.175 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:15.176 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:__init__:21 - FeedbackLoopNode initialized with inline prompt chain.
+2025-07-22 01:12:15.176 | INFO     | workflows.graphs.campaign.subgraphs.validation_subgraph:__init__:25 - Initializing ValidationWorkflow...
+2025-07-22 01:12:15.176 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:15.507 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:15.508 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:__init__:112 - CampaignObjectiveValidatorNode initialized.
+2025-07-22 01:12:15.508 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:15.844 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:15.844 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:__init__:22 - PersonaQualityCheckerNode initialized.
+2025-07-22 01:12:15.844 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:16.171 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:16.172 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:__init__:21 - BudgetClassifierNode initialized.
+2025-07-22 01:12:16.172 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:16.514 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:16.514 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:__init__:21 - ChannelConstraintsNode initialized.
+2025-07-22 01:12:16.514 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:__init__:32 - HumanReviewRouter initialized successfully with fallback chain.
+2025-07-22 01:12:16.514 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:16.850 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:16.850 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:__init__:22 - ObjectiveRefinerNode initialized.
+2025-07-22 01:12:16.850 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:17.175 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:17.176 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:__init__:22 - PersonaEnrichmentNode initialized.
+2025-07-22 01:12:17.176 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:17.495 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:17.496 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:__init__:22 - FallbackPersonaNode initialized.
+2025-07-22 01:12:17.509 | INFO     | workflows.graphs.campaign.subgraphs.media_ad_gen_subgraph:__init__:24 - Initializing CampaignWorkflow...
+2025-07-22 01:12:17.510 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:17.815 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:17.816 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:__init__:21 - EmailAdGeneratorNode initialized.
+2025-07-22 01:12:17.816 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:18.149 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:18.149 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:__init__:104 - SocialAdGeneratorNode initialized.
+2025-07-22 01:12:18.149 | INFO     | core.llm_manager:create_llm:82 - Initializing LLM provider: groq | Temperature: 0.3 | Overrides: {}
+2025-07-22 01:12:18.525 | INFO     | core.chain:build:107 - Built chain for: default using provider: groq
+2025-07-22 01:12:18.525 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:__init__:21 - WebAdGeneratorNode initialized.
+2025-07-22 01:12:18.547 | INFO     | __main__:__init__:47 - CampaignOrchestrator initialized successfully
+2025-07-22 01:12:18.548 | INFO     | __main__:run:220 - Running CampaignWorkflow for user_id=y, query='apple welcome kit'
+2025-07-22 01:12:19.314 | INFO     | workflows.graphs.campaign.nodes.campaign_objective_validator_node:process:148 - Objective validation result: invalid. 
+
+the campaign objective mentions gen z users, but the persona description mentions young professionals interested in tech and fitness, which may not necessarily align with gen z. additionally, the persona does not specifically mention gen z. 
+
+however, assuming gen z can be a subset of young professionals, a more precise objective would reference the persona directly: 
+
+ revised to: "valid" if revised as  "promote the new ai-powered smartwatch to young professionals interested in tech and fitness". 
+
+but as it is: invalid.
+2025-07-22 01:12:20.150 | INFO     | workflows.graphs.campaign.nodes.objective_refiner_node:process:52 - Refined Objective: "Increase brand awareness and drive pre-orders among young professionals aged 20-30 who are interested in wearable technology and fitness tracking, by highlighting the AI-powered smartwatch's unique features and health monitoring capabilities."
+2025-07-22 01:12:20.953 | INFO     | workflows.graphs.campaign.nodes.persona_quality_checker_node:process:61 - Persona quality check result: based on the provided user persona:
+
+ description: young professional interested in tech and fitness
+ age range: 
+ interests: 
+
+the persona lacks specific details in several areas:
+
+- it does not include specific demographic details such as age, which is crucial for understanding the target audience.
+- while it mentions interests (tech and fitness), it does not provide any further details about behavioral traits or preferences that could help in tailoring products or services.
+- there is no mention of a preferred platform or channel.
+
+given these omissions, the persona does not meet the criteria for completeness as it stands:
+
+- does not include demographic details (e.g., age, region).
+- while it mentions interests, it lacks specificity and does not mention any behavioral traits.
+- does not mention platform/channel or preference.
+
+therefore, the completeness of the user persona is:
+
+poor
+2025-07-22 01:12:21.630 | INFO     | workflows.graphs.campaign.nodes.persona_enrichment_node:process:58 - Enriched Persona: The enriched persona description is: 
+"Alex, a 25-year-old urban professional based in major cities like New York, London, or Tokyo, is enthusiastic about staying active and up-to-date with the latest wearable technology. In their free time, Alex enjoys running, hiking, and practicing yoga, while also following tech blogs and attending fitness events. They are active on social media platforms such as Instagram, Twitter, and LinkedIn, often engaging with fitness and tech influencers. When making purchasing decisions, Alex values innovation, ease of use, and stylish design, typically researching products online, reading reviews, and comparing features before making a buy. They prioritize health and wellness, seeking products that can help them track and improve their fitness goals, and are likely to invest in premium products that offer advanced features and reliable performance."
+2025-07-22 01:12:22.069 | WARNING  | workflows.graphs.campaign.nodes.budget_classifier_node:process:53 - Unexpected budget classification: to classify the marketing campaign's budget, i need information about the campaign. you've provided none. 
+
+however, based on your instruction to assume 'budget' if unclear, i'll respond with:
+
+budget
+2025-07-22 01:12:22.070 | INFO     | workflows.graphs.campaign.nodes.budget_classifier_node:process:57 - Budget classified as: budget
+2025-07-22 01:12:22.515 | INFO     | workflows.graphs.campaign.nodes.fallback_persona_node:process:48 - Fallback Persona Applied: The target user persona is a health-conscious individual, likely in their 20s or early 30s, who values fitness and wellness, is interested in technology and innovation, and is actively seeking a reliable and feature-rich smartwatch to track their daily activities and monitor their health.
+2025-07-22 01:12:22.965 | INFO     | workflows.graphs.campaign.nodes.channel_constraints_node:process:65 - Constraints extracted: **Campaign Constraints Analysis**
+
+After reviewing the provided instructions, the following constraints were identified:
+
+* None
+
+**Constraints List:**
+ 
+* No constraints 
+
+Since no constraints were provided, the response is:
+
+**No constraints**
+2025-07-22 01:12:22.966 | WARNING  | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:50 - No ads found for review. Skipping human review step.
+2025-07-22 01:12:22.967 | INFO     | workflows.graphs.campaign.nodes.check_external_logs_node:process:32 - No external logs. Routing to segmentation only.
+2025-07-22 01:12:24.321 | INFO     | workflows.graphs.campaign.nodes.segmenting_node:process:76 - Predicted segment: premium
+2025-07-22 01:12:25.951 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:92 - Campaign recommendation generated successfully.
+2025-07-22 01:12:26.551 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 01:12:26.553 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/y_2025-07-22_01-12-26.txt
+2025-07-22 01:12:27.909 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 01:12:28.329 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 01:12:32.229 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 01:12:32.711 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: no.
+2025-07-22 01:12:32.713 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: Unlock Exclusive Access to Our Curated Collection. Discover rare and unique luxury products, handpicked for discerning individuals like you. Experience the art of fine living with our personalized recommendations and expert insights. Join our community of premium buyers and enjoy unparalleled service, bespoke offerings, and VIP events. Elevate your lifestyle with the finest brands and craftsmanship. 
+2025-07-22 01:12:32.713 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:61 - Human Review Forced....
+2025-07-22 01:14:00.326 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:85 - Captured human feedback: use KPIs as constraints but go all out on creativity
+2025-07-22 01:14:02.814 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:94 - Marked for revision based on feedback.
+2025-07-22 01:14:05.711 | INFO     | workflows.graphs.campaign.nodes.recommend_node:process:92 - Campaign recommendation generated successfully.
+2025-07-22 01:14:06.430 | INFO     | workflows.graphs.campaign.nodes.generate_ad_node:process:65 - Ad successfully generated.
+2025-07-22 01:14:06.430 | INFO     | core.utils.campaign_recs:save:39 - Campaign report saved: campaign_outputs/y_2025-07-22_01-14-06.txt
+2025-07-22 01:14:07.434 | INFO     | workflows.graphs.campaign.nodes.email_ad_generator_node:process:57 - Email ad content generated.
+2025-07-22 01:14:07.883 | INFO     | workflows.graphs.campaign.nodes.social_ad_generator_node:process:140 - Social media ad content generated.
+2025-07-22 01:14:08.509 | INFO     | workflows.graphs.campaign.nodes.web_ad_generator_node:process:58 - Web ad content generated.
+2025-07-22 01:14:08.958 | INFO     | workflows.graphs.campaign.nodes.is_ab_testing_needed_node:process:52 - MultiVariantTestNode decision: no.
+2025-07-22 01:14:08.960 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:55 - Reviewing ad variant: Introducing The Art of Fine Living, where every moment is a masterpiece. Discover exclusive access to rare luxury products and experiences, crafted to elevate your senses and refine your lifestyle. From expertly crafted timepieces to one-of-a-kind collectibles, our curated selection is tailored to the world's most discerning buyers. Join our community of premium buyers and unlock the ultimate luxury experience. 
+2025-07-22 01:14:08.960 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:61 - Human Review Forced....
+2025-07-22 01:14:25.537 | INFO     | workflows.graphs.campaign.nodes.human_in_the_loop_node:process:99 - No feedback provided. Proceeding without revision.
+2025-07-22 01:14:25.538 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:39 - Selected final ad after feedback loop: Introducing The Art of Fine Living, where every moment is a masterpiece. Discover exclusive access to rare luxury products and experiences, crafted to elevate your senses and refine your lifestyle. From expertly crafted timepieces to one-of-a-kind collectibles, our curated selection is tailored to the world's most discerning buyers. Join our community of premium buyers and unlock the ultimate luxury experience. 
+2025-07-22 01:14:26.991 | INFO     | workflows.graphs.campaign.nodes.feedback_loop_node:process:68 - Feedback processed and analyzed successfully.
+2025-07-22 01:14:26.993 | INFO     | __main__:_save_campaign_report:206 - Campaign report saved: campaign_outputs/y_2025-07-22_01-14-26.txt
+2025-07-22 01:14:26.997 | WARNING  | __main__:get_graph_structure:168 - Pyppeteer not installed. Run: pip install pyppeteer
+2025-07-22 01:14:27.748 | INFO     | __main__:main:271 - Saved campaign graph structure as campaign_graph_structure.png
