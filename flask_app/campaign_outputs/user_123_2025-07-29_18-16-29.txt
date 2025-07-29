@@ -1,0 +1,58 @@
+📊 CAMPAIGN REPORT
+                ────────────────────────────
+                User ID: user_123
+                Timestamp: 2025-07-29_18-16-29
+                Campaign Query: hard disk
+
+                User Segment: budget
+                Campaign Objective: Promote affordable value-for-money deals
+
+                Recommendation:
+                **Personalized Marketing Strategy**
+
+**User Persona:** Budget-Conscious Consumer
+
+**Campaign Objective:** Encourage cost-effective purchasing decisions
+
+**Marketing Strategy:**
+
+1. **Emphasize Value and Savings**: Highlight affordable options, discounts, and promotions to appeal to the user's budget constraints.
+2. **Practical and Informative Content**: Focus on content that educates users on how to make the most of their budget, such as product comparisons, tutorials, and budget-friendly tips.
+
+**Content Formats:**
+
+1. **Carousel Ads**: Showcase multiple products or services at different price points to help users compare and make informed decisions.
+2. **Short-Form Videos**: Create concise, engaging videos demonstrating product features, tutorials, or customer testimonials.
+3. **Blog Posts**: Publish informative articles on budget-friendly living, product reviews, and smart shopping strategies.
+
+**Social Platforms:**
+
+1. **Facebook**: Target users with specific interests, behaviors, and demographics to maximize ad relevance.
+2. **Instagram**: Leverage visually-driven content to engage users and promote products through Stories and Reels.
+3. **Pinterest**: Reach users actively searching for budget-friendly ideas, products, and inspiration.
+
+**Tone and Messaging Guidelines:**
+
+1. **Friendly and Approachable**: Use a warm, conversational tone to build trust and rapport with users.
+2. **Clear and Concise**: Ensure messaging is straightforward, highlighting key benefits and value propositions.
+3. **Emphasize Savings**: Use language that emphasizes cost savings, such as "affordable," "budget-friendly," and "discounted."
+
+**CTA Suggestions:**
+
+1. **Shop Now**: Encourage users to explore products and make a purchase.
+2. **Learn More**: Invite users to discover more about a product or service.
+3. **Sign Up**: Promote special offers or newsletters to users who sign up for updates.
+
+**Additional Recommendations:**
+
+1. **Influencer Partnerships**: Collaborate with budget-conscious influencers or bloggers to promote products and reach a wider audience.
+2. **User-Generated Content**: Encourage customers to share their own budget-friendly shopping experiences and showcase them on social media.
+
+By implementing this personalized marketing strategy, you can effectively engage with budget-conscious consumers, drive cost-effective purchasing decisions, and achieve your campaign objectives.
+
+                Generated Ad Copy:
+                Smart Shopping Starts Here! Discover affordable deals on everyday essentials, from fashion to home goods. Compare prices, snag discounts, and save big! Shop now and make the most of your budget! 
+
+                Human Feedback:
+                No feedback received.
+                

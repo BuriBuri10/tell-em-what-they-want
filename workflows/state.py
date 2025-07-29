@@ -58,6 +58,7 @@ class GraphState(BaseModel):
     channel_instructions: Annotated[Optional[str], Reducer.update] = None
     channel_constraints: Annotated[Optional[Dict[str, Any]], Reducer.update] = None
     constraints_found: Annotated[Optional[bool], Reducer.update] = False
+    preferred_channel: Annotated[Optional[str], Reducer.update] = None
     budget_tier: Annotated[Optional[str], Reducer.update] = None
 
     # Recommendation engine

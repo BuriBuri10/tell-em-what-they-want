@@ -1,0 +1,59 @@
+📊 CAMPAIGN REPORT
+                ────────────────────────────
+                User ID: user_123
+                Timestamp: 2025-07-29_17-29-26
+                Campaign Query: hard disk
+
+                User Segment: budget
+                Campaign Objective: Promote affordable value-for-money deals
+
+                Recommendation:
+                **Personalized Marketing Strategy**
+
+**User Persona:** Budget-Conscious Consumer
+
+**Campaign Objective:** Drive sales and conversions among budget-conscious consumers.
+
+**Marketing Strategy:**
+
+1. **Emphasize Value and Affordability**: Highlight cost-effective solutions, discounts, and promotions to appeal to the user's budget constraints.
+2. **Practical and Informative Content**: Create content that educates users on how to make the most of their budget, showcasing products or services that offer the best value for money.
+
+**Recommended Content Formats:**
+
+1. **Carousel Ads**: Showcase multiple products or services with varying price points to cater to different budget segments.
+2. **Short-Form Videos**: Create engaging, 15-second videos demonstrating product value, usage, or customer testimonials.
+3. **Infographics**: Visualize budget-friendly tips, comparisons, or product features to facilitate easy comprehension.
+
+**Best-Performing Social Platforms:**
+
+1. **Facebook**: Target specific audiences using Facebook's robust ad targeting capabilities.
+2. **Instagram**: Leverage Instagram's shopping features and visually-driven platform to showcase products.
+3. **TikTok**: Utilize TikTok's short-form video format to create engaging, budget-friendly content.
+
+**Tone and Messaging Guidelines:**
+
+1. **Friendly and Approachable**: Use a warm, conversational tone to establish trust and rapport.
+2. **Clear and Concise**: Communicate value propositions and benefits in a straightforward, easy-to-understand manner.
+3. **Prominent CTAs**: Use actionable language (e.g., "Get Started," "Shop Now," "Learn More") to encourage conversions.
+
+**CTA Suggestions:**
+
+1. **Limited-Time Offers**: Create a sense of urgency with limited-time discounts or promotions (e.g., " Limited stock available!").
+2. **Value-Driven CTAs**: Emphasize the benefits of taking action (e.g., "Save up to 20% on your purchase").
+3. **Free Resources**: Offer free guides, eBooks, or webinars that provide valuable information and encourage users to engage with the brand.
+
+**Additional Recommendations:**
+
+1. **Influencer Partnerships**: Collaborate with social media influencers who cater to budget-conscious audiences.
+2. **User-Generated Content**: Encourage customers to share their experiences and showcase them on social media.
+3. **Retargeting Ads**: Target users who have visited the website or engaged with previous ads to maximize conversion potential.
+
+By implementing this personalized marketing strategy, you can effectively resonate with budget-conscious consumers, drive sales, and achieve campaign objectives.
+
+                Generated Ad Copy:
+                Save big on your essentials! Discover our range of affordable products, from budget-friendly basics to value-for-money deals. Limited time offer: Get 20% off your first purchase! Shop now and start saving today! 
+
+                Human Feedback:
+                No feedback received.
+                

@@ -36,6 +36,7 @@ def define_log_level(print_level="INFO", logfile_level="DEBUG", name: Optional[s
     project_root = find_project_root()
     logs_dir = os.path.join(project_root, "logs")
     os.makedirs(logs_dir, exist_ok=True)
+    print(f"[Logger Init] Writing logs to: {os.path.join(logs_dir, f'{log_name}.txt')}")
 
     _logger.remove()
     _logger.add(sys.stderr, level=print_level)

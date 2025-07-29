@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📈 dentsu Personalized Campaign Orchestrator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- GSAP (GreenSock Animation Platform) for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        /* Use Inter as the default font */
+        body {
+            font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #EFEFEF;
+            overflow-x: hidden; /* Prevent horizontal scroll caused by animations */
+        }
+
+        /* Custom styles for a more polished look */
+        .gradient-text {
+            background: linear-gradient(90deg, #3DDEBF, #97FFD5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-input {
+            background-color: #1A1A1A;
+            border: 1px solid #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3DDEBF;
+            box-shadow: 0 0 0 2px rgba(61, 222, 191, 0.3);
+        }
+        
+        .submit-btn {
+            background-color: #FFFFFF;
+            color: #000000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #3DDEBF;
+            transform: scale(1.03);
+        }
+
+        /* Hide elements for animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 w-full z-10 bg-black/50 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="flex justify-between items-center h-20 border-b border-gray-800">
+                <h1 class="text-xl font-bold tracking-wider uppercase">
+                    dentsu <span class="font-light">Personalized Campaign Orchestrator</span>
+                </h1>
+                <a href="https://www.dentsucreative.com" target="_blank" class="text-sm text-gray-400 hover:text-white transition-colors duration-300">
+                    Inspired by Dentsu Creative
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-32 text-center">
+            <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter reveal">
+                Marketing Campaign Orchestration<br> <span class="gradient-text">Powered by AI</span>
+            </h2>
+            <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-400 reveal">
+                Seamlessly launch, monitor, and analyze your marketing initiatives with cutting-edge automation and real-time feedback.
+            </p>
+        </section>
+
+        <!-- Form Section -->
+        <section class="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 py-16 reveal">
+            <div class="bg-[#101010] border border-gray-800 rounded-2xl p-8 sm:p-12">
+                <h3 class="text-2xl font-bold mb-2 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#3DDEBF]"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                    <span>Launch a New Campaign</span>
+                </h3>
+                <p class="text-gray-400 mb-8">Fill in the details below to deploy your campaign workflow.</p>
+                
+                <form method="POST" class="space-y-6">
+                    <div>
+                        <label for="user_id" class="block text-sm font-medium text-gray-300 mb-2">User ID</label>
+                        <input id="user_id" name="user_id" type="text" value="eg.- dentsuitte" required class="w-full px-4 py-3 rounded-lg form-input">
+                    </div>
+
+                    <div>
+                        <label for="query" class="block text-sm font-medium text-gray-300 mb-2">Campaign Query</label>
+                        <input id="query" name="query" type="text" value="eg.- promote next-gen eco-friendly sneakers" required class="w-full px-4 py-3 rounded-lg form-input">
+                    </div>
+
+                    <div class="pt-4">
+                        <input type="submit" value="Run Campaign" class="w-full py-4 rounded-lg font-bold text-lg cursor-pointer submit-btn">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Logs and Output Section -->
+        <section class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-16 space-y-16">
+            <!-- Logs -->
+            <div class="logs-output reveal">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#3DDEBF]"><path d="M12 12h.01"></path><path d="M16 6h.01"></path><path d="M16 18h.01"></path><path d="M8 6h.01"></path><path d="M8 18h.01"></path><path d="M12 6h.01"></path><path d="M12 18h.01"></path></svg>
+                    <span>Live Log Stream</span>
+                </h3>
+                <pre id="logs" class="bg-[#101010] border border-gray-800 text-gray-300 p-6 rounded-2xl h-96 overflow-y-auto font-mono text-sm whitespace-pre-wrap word-wrap-break-word">Initializing log stream... waiting for data.</pre>
+            </div>
+
+            <!-- Conditional Output Block -->
+            {% if output %}
+            <div class="output-display reveal">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#3DDEBF]"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Campaign Output</span>
+                </h3>
+                <pre class="bg-gray-900 border border-gray-700 text-gray-300 p-6 rounded-lg font-mono text-sm whitespace-pre-wrap word-wrap-break-word">{{ output | safe }}</pre>
+            </div>
+            {% endif %}
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mt-24">
+        <div class="py-8 border-t border-gray-800 text-center text-gray-500">
+            <p>&copy; 2025 <a href="https://www.dentsucreative.com" target="_blank" class="hover:text-white transition-colors duration-300">Dentsu Creative</a> — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- LOG FETCHING SCRIPT ---
+        function fetchLogs() {
+            // This is a mock fetch function for demonstration.
+            // Replace with your actual '/logs' endpoint.
+            const mockLogs = [
+                `[${new Date().toISOString()}] INFO: Initializing campaign for user_123.`,
+                `[${new Date().toISOString()}] DEBUG: Query received: "Promote next-gen eco-friendly sneakers".`,
+                `[${new Date().toISOString()}] INFO: Analyzing target audience segments.`,
+                `[${new Date().toISOString()}] INFO: Generating ad copy variants.`,
+                `[${new Date().toISOString()}] WARN: Budget limit approaching for social media spend.`,
+                `[${new Date().toISOString()}] INFO: Deploying assets to production CDN.`,
+                `[${new Date().toISOString()}] SUCCESS: Campaign 'Eco-Sneakers Q3' is now live.`
+            ];
+            const logsElement = document.getElementById("logs");
+            // Simulate new logs appearing
+            const newLog = mockLogs[Math.floor(Math.random() * mockLogs.length)];
+            const currentText = logsElement.innerText;
+             if (currentText === 'Initializing log stream... waiting for data.') {
+                logsElement.innerText = newLog + '\n';
+            } else {
+                logsElement.innerText += newLog + '\n';
+            }
+            // Auto-scroll to the bottom
+            logsElement.scrollTop = logsElement.scrollHeight;
+        }
+
+        // Fetch logs every 2 seconds for demonstration
+        setInterval(fetchLogs, 2000);
+
+        // --- ANIMATION SCRIPT ---
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate elements with the .reveal class
+            const revealElements = document.querySelectorAll('.reveal');
+
+            revealElements.forEach((el, index) => {
+                gsap.to(el, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 90%', // When the top of the element is 90% from the top of the viewport
+                        toggleActions: 'play none none none',
+                        // markers: true, // Uncomment for debugging
+                    },
+                    // Add a slight delay to the initial hero elements for a staggered effect
+                    delay: el.closest('section.text-center') ? index * 0.15 : 0
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📈 Campaign Workflow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* Global dark theme */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #111;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2, h3 {
+      color: #fefefe;
+      font-weight: 600;
+    }
+
+    form {
+      background: #1a1a1a;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 40px;
+      border: 1px solid #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ccc;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background-color: #222;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #e5e5e5;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #d6d6d6;
+      padding: 16px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 15px;
+      border: 1px solid #333;
+    }
+
+    .logs-output {
+      margin-bottom: 40px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding: 30px 20px;
+      border-top: 1px solid #333;
+    }
+
+    a {
+      color: #999;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+
+  <script>
+    function fetchLogs() {
+      fetch('/logs')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("logs").innerText = data.logs.join('');
+        });
+    }
+
+    setInterval(fetchLogs, 1000);
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Dentsu Campaign Orchestrator</h1>
+  </header>
+
+  <main>
+    <h2>🚀 Launch a Campaign</h2>
+    <form method="POST">
+      <label for="user_id">User ID:</label>
+      <input id="user_id" name="user_id" type="text" value="user_123" required>
+
+      <label for="query">Campaign Query:</label>
+      <input id="query" name="query" type="text" value="Promote eco-friendly sneakers" required>
+
+      <input type="submit" value="Run Campaign">
+    </form>
+
+    <div class="logs-output">
+      <h3>🪵 Logs:</h3>
+      <pre id="logs">Logs will appear here...</pre>
+    </div>
+
+    {% if output %}
+    <div>
+      <h3>✅ Output:</h3>
+      <pre>{{ output | safe }}</pre>
+    </div>
+    {% endif %}
+  </main>
+
+  <footer>
+    &copy; 2025 <a href="https://www.dentsucreative.com" target="_blank">Dentsu Creative</a> — All rights reserved.
+  </footer>
+</body>
+</html>

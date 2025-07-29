@@ -10,6 +10,9 @@ folders_and_files = {
     "api": ["main.py"],
     "api/routes": ["__init__.py", "user.py", "campaign.py", "analytics.py"],
 
+    "flask_app": ["app.py"],
+    "flask_app/templates": ["index.html"],
+
     "configs": ["__init__.py", "app_config.py"],
 
     "core": [
@@ -33,7 +36,7 @@ folders_and_files = {
 
     "services/analytics": ["metrics_collector.py"],
 
-    "workflows": ["state.py", "workflow.py"],
+    "workflows": ["__init__.py", "state.py", "workflow.py"],
 
     "workflows/graphs/campaign": ["__init__.py"],
 
@@ -60,6 +63,7 @@ folders_and_files = {
         "vide0_gen_Veo3_node.py",
 
         "__init__.py", "check_external_logs_node.py",
+        "persona_node.py", "strategy_node.py",
         "segmenting_node.py", "analytics_node.py",
         "generate_ad_node.py", "recommend_node.py",
         "human_in_the_loop_node.py", 
@@ -70,7 +74,7 @@ folders_and_files = {
         "persona_subgraph.py", "strategy_subgraph.py", "validation_subgraph.py", "fallback_subgraph.py", "media_ad_gen_subgraph.py"
     ],
 
-    "workflows/graphs/campaign/prompts": ["segment_prompt.py", "ad_prompt.py", "recommendation_prompt.py", "human_in_the_loop_prompt.py"],
+    "workflows/graphs/campaign/prompts": ["persona_node.py", "strategy_node.py", "segment_prompt.py", "ad_prompt.py", "recommendation_prompt.py", "human_in_the_loop_prompt.py"],
 
     "tests": ["test_user.py", "test_campaign.py", "test_llm_integration.py"],
 

@@ -121,9 +121,9 @@ class CampaignObjectiveValidatorNode:
         Returns:
             GraphState: Updated with objective_is_valid flag (True/False).
         """
-        # NOTE: introduce this dummy while introducing subgraphs
-        state.user_persona = {"description": "Young professional interested in tech and fitness"}
-        state.campaign_objective = "Promote the new AI-powered smartwatch to Gen Z users"
+        # # NOTE: introduce this dummy while introducing subgraphs
+        # state.user_persona = {"description": "Young professional interested in tech and fitness"}
+        # state.campaign_objective = "Promote the new AI-powered smartwatch to Gen Z users"
 
         try:
             if not state.user_persona or not state.campaign_objective:

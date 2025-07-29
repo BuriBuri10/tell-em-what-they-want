@@ -1,0 +1,63 @@
+📊 CAMPAIGN REPORT
+                ────────────────────────────
+                User ID: user_123
+                Timestamp: 2025-07-29_15-53-00
+                Campaign Query: Promote next-gen eco-friendly sneakers
+
+                User Segment: standard
+                Campaign Objective: Promote general-purpose products to average customers
+
+                Recommendation:
+                **Personalized Marketing Strategy for Standard User Segment**
+
+**Campaign Objective:** (Not specified, assuming it's to drive engagement and conversions)
+
+**User Insights:**
+
+* **Interests:** Assuming a standard user has general interests, no specific niche or hobby.
+* **Behavior:** Moderate online activity, likely to engage with content that resonates with their daily life.
+* **Demographic:** Average age, income, and education level.
+
+**Marketing Strategy:**
+
+1. **Content Themes:** Focus on everyday life, product benefits, and educational content.
+2. **Content Formats:**
+	* **Video:** Short, engaging videos (15-60 seconds) showcasing product features, tutorials, or customer testimonials.
+	* **Carousel:** 2-3 image carousels highlighting product benefits, features, or promotions.
+	* **Story:** Behind-the-scenes, sneak peeks, or exclusive offers to keep the audience engaged.
+3. **Social Platforms:**
+	* **Facebook:** Primary platform for reaching a broad audience.
+	* **Instagram:** Secondary platform for visually engaging content and stories.
+	* **Twitter:** Tertiary platform for short-form updates, promotions, and customer service.
+
+**Tone and Messaging Guidelines:**
+
+* **Tone:** Friendly, approachable, and informative.
+* **Messaging:** Clear, concise, and focused on product benefits.
+* **Key Messages:**
+	+ Emphasize how the product solves everyday problems.
+	+ Highlight customer success stories and testimonials.
+
+**Call-to-Action (CTA) Suggestions:**
+
+* **Primary CTA:** "Learn More" or "Sign Up" for product information or promotions.
+* **Secondary CTA:** "Shop Now" or "Get Started" for direct conversions.
+
+**Content Calendar:**
+
+* **Posting Schedule:** 3-5 times a week on Facebook and Instagram, 5-7 times a week on Twitter.
+* **Content Types:** Mix of promotional, educational, and engaging content.
+
+**Performance Metrics:**
+
+* **Engagement:** Track likes, comments, shares, and saves.
+* **Conversions:** Monitor sign-ups, sales, or other desired actions.
+
+By following this strategy, we can effectively engage with the standard user segment, drive conversions, and build brand awareness. Ongoing performance monitoring and adjustments will ensure optimal results.
+
+                Generated Ad Copy:
+                Upgrade your daily routine with our versatile products! From home essentials to everyday helpers, we've got you covered. Discover how our general-purpose products can make a difference in your life. Learn More
+
+                Human Feedback:
+                No feedback received.
+                

@@ -10,6 +10,8 @@ from langgraph.graph import START, END, StateGraph
 from langchain_core.runnables.graph import CurveStyle
 
 from workflows.state import GraphState
+from workflows.graphs.campaign.nodes.persona_node import UserPersonaNode
+from workflows.graphs.campaign.nodes.strategy_node import StrategyNode
 from workflows.graphs.campaign.nodes.check_external_logs_node import CheckExternalLogsNode
 from workflows.graphs.campaign.nodes.analytics_node import AnalyticsNode
 from workflows.graphs.campaign.nodes.segmenting_node import UserSegmenter
@@ -29,6 +31,8 @@ class CampaignWorkflow:
     def __init__(self):
         logger.info("Initializing CampaignWorkflow...")
         
+        self.client_persona_node = UserPersonaNode()
+        self.strategy_node = StrategyNode()
         self.check_external_logs_node = CheckExternalLogsNode()
         self.analytics_node = AnalyticsNode()
         self.segmenting_node = UserSegmenter()
@@ -56,15 +60,9 @@ class CampaignWorkflow:
         campaign_graph.add_node("validation", self.validation_subgraph)
         campaign_graph.add_node("media_ad_generation", self.mediaAd_subgraph)
 
-        # campaign_graph.subb(
-        #     name="media_ad_generation",
-        #     graph=self.mediaAd_subgraph,
-        #     inputs=["campaign_objective", "user_persona"],
-        #     outputs=["generated_ad"]
-        # )
-
-
         # Attach standalone nodes
+        campaign_graph.add_node("client persona", self.client_persona_node.process)
+        campaign_graph.add_node("proto-strategy", self.strategy_node.process)
         campaign_graph.add_node("check_external_logs", self.check_external_logs_node.process)
         campaign_graph.add_node("analytics", self.analytics_node.process)
         campaign_graph.add_node("segmenting", self.segmenting_node.process)
@@ -76,7 +74,9 @@ class CampaignWorkflow:
         campaign_graph.add_node("feedback_loop", self.feedback_node.process)
 
         # Set entry point and edges
-        campaign_graph.add_edge(START, "validation")
+        campaign_graph.add_edge(START, "client persona")
+        campaign_graph.add_edge("client persona", "proto-strategy")
+        campaign_graph.add_edge("proto-strategy", "validation")
         campaign_graph.add_edge("validation", "check_external_logs")
         campaign_graph.add_conditional_edges(
             "check_external_logs",
@@ -115,43 +115,6 @@ class CampaignWorkflow:
 
         return campaign_graph.compile()
 
-
-        # """
-        # Creates and compiles the LangGraph workflow for ad campaign generation.
-        # """
-        # workflow = StateGraph(GraphState)
-
-        # # Define nodes
-        # # workflow.add_node()
-        # workflow.add_node("check_external_logs", self.check_external_logs_node.process)
-        # workflow.add_node("analytics", self.analytics_node.process)
-        # workflow.add_node("segmenting", self.segmenting_node.process)
-        # workflow.add_node("recommend", self.recommend_node.process)
-        # workflow.add_node("generate_ad", self.generate_ad_node.process)
-        # workflow.add_node("human_review", self.hitl.process)
-        # workflow.add_node("feedback_loop", self.feedback_node.process)
-
-        # # Connect the flow
-        # workflow.add_edge(START, "check_external_logs")
-        # # workflow.add_conditional_edges(START, lambda x: x.is_query_valid, {True: "analytics", False: "segmanting"})
-        # workflow.add_conditional_edges(
-        #     "check_external_logs",
-        #     lambda state: state.has_external_logs,
-        #     {
-        #         True: "analytics",
-        #         False: "segmenting"
-        #     }
-        # )
-        # workflow.add_edge("analytics", "recommend")
-        # workflow.add_edge("segmenting", "recommend")
-        # workflow.add_edge("recommend", "generate_ad")
-        # workflow.add_edge("generate_ad", "human_review")
-        # workflow.add_edge("human_review", "feedback_loop")
-        # workflow.add_edge("feedback_loop", END)
-
-        # logger.info("Workflow graph defined.")
-
-        # return workflow.compile()
 
     async def get_graph_structure(self, use_pyppeteer: bool = True) -> bytes:
         """
@@ -251,15 +214,15 @@ if __name__ == "__main__":
         try:
             result = await workflow.run(query=query, user_id=user_id)
 
-            print("\n🎯 CAMPAIGN WORKFLOW RESULT\n─────────────────────────────")
-            print(f"🧑 User Segment: {result.user_segment or 'N/A'}")
-            print(f"🎯 Campaign Objective: {result.campaign_objective or 'N/A'}")
-            print(f"\n💡 Recommendation:\n{result.campaign_recommendation or 'N/A'}")
-            print(f"\n📝 Generated Ad:\n{result.generated_ad or 'N/A'}")
-            print(f"\n💬 Human Feedback:\n{result.ad_feedback or 'No feedback provided.'}")
+            print("\n CAMPAIGN WORKFLOW RESULT\n─────────────────────────")
+            print(f"User Segment: {result.user_segment or 'N/A'}")
+            print(f"Campaign Objective: {result.campaign_objective or 'N/A'}")
+            print(f"\nRecommendation:\n{result.campaign_recommendation or 'N/A'}")
+            print(f"\nGenerated Ad:\n{result.generated_ad or 'N/A'}")
+            print(f"\nHuman Feedback:\n{result.ad_feedback or 'No feedback provided.'}")
 
         except Exception as e:
-            print("\n🚨 Workflow failed:")
+            print("\nWorkflow failed:")
             print(str(e))
             return
 
