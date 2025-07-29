@@ -47,7 +47,7 @@ class UserSegmenter:
                 - "standard"
                 - "premium"
 
-                ONLY respond in **valid JSON** exactly like this (STRICTLY without any explanation):
+                ONLY respond in 'valid JSON' exactly like this (STRICTLY without any explanation):
 
                 {{
                 "segment": "budget"

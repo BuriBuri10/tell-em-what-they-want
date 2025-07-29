@@ -50,21 +50,26 @@ threading.Thread(target=stream_logs, daemon=True).start()
 @app.route("/", methods=["GET", "POST"])
 def index():
     output = None
+    docx_link = None  # <--- Initialize the link
+
     if request.method == "POST":
         user_id = request.form.get("user_id")
         query = request.form.get("query")
-        campaign_workflow = CampaignWorkflow()
 
-        state = asyncio.run(campaign_workflow.run(user_id=user_id, query=query))
-        # result = asyncio.run(workflow.run(query=query, user_id=user_id))
-
-        # Save the report
-        CampaignReportSaver.save(state, user_id=user_id, query=query)
-
-        # Create the same report string (repeating CampaignReportSaver logic)
-        from datetime import datetime
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
+        campaign_workflow = CampaignWorkflow()
+        state = asyncio.run(campaign_workflow.run(user_id=user_id, query=query))
+
+        # Save the report
+        CampaignReportSaver.save(state, user_id=user_id, query=query, timestamp=timestamp)
+
+        # Prepare download link (same logic used in .docx saving)
+        # timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        docx_filename = f"{user_id}_{timestamp}.docx"
+        docx_link = f"/download/{docx_filename}"
+
+        # Build report preview for UI
         report = f"""📊 CAMPAIGN REPORT
 ───────────────────────
 User ID: {user_id}
@@ -88,7 +93,49 @@ Human Feedback:
 """
         output = report
 
-    return render_template("index.html", output=output)
+    return render_template("index.html", output=output, docx_link=docx_link)
+
+# @app.route("/", methods=["GET", "POST"])
+# def index():
+#     output = None
+#     if request.method == "POST":
+#         user_id = request.form.get("user_id")
+#         query = request.form.get("query")
+#         campaign_workflow = CampaignWorkflow()
+
+#         state = asyncio.run(campaign_workflow.run(user_id=user_id, query=query))
+
+#         # Save the report
+#         CampaignReportSaver.save(state, user_id=user_id, query=query)
+
+#         # Create the same report string (repeating CampaignReportSaver logic)
+#         from datetime import datetime
+#         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+#         report = f"""📊 CAMPAIGN REPORT
+# ───────────────────────
+# User ID: {user_id}
+# Timestamp: {timestamp}
+# Campaign Query: {query}
+
+# User Segment: {state.user_segment or 'N/A'}
+# Campaign Objective: {state.campaign_objective or 'N/A'}
+# Recommendation: {state.campaign_recommendation or 'N/A'}
+# Generated Ad Copy: {state.generated_ad or 'N/A'}
+# Human Feedback: {state.ad_feedback or 'No feedback yet'}
+
+# Recommendation:
+# {state.campaign_recommendation or 'N/A'}
+
+# Generated Ad Copy:
+# {state.generated_ad or 'N/A'}
+
+# Human Feedback:
+# {state.ad_feedback or 'No feedback yet'}
+# """
+#         output = report
+
+#     return render_template("index.html", output=output)
 
 
 @app.route("/logs")
@@ -107,73 +154,19 @@ def get_logs():
         return jsonify({"logs": [f"Error: {e}"]})
     
 
-@app.route("/submit_feedback", methods=["POST"])
-def submit_feedback():
-    feedback = request.form.get("feedback")
-    revision = request.form.get("revision") == "true"
+from flask import send_from_directory
 
-    # Call the router’s method (ensure you're referencing the correct instance)
-    campaign_workflow.human_review_router.receive_feedback(feedback, revision)
-    return "Feedback submitted", 200
+@app.route('/download/<filename>')
+def download_file(filename):
+    output_dir = os.path.abspath("campaign_outputs")
+    file_path = os.path.join(output_dir, filename)
+
+    if not os.path.exists(file_path):
+        return "File not found", 404
+
+    return send_from_directory(output_dir, filename, as_attachment=True)
 
 
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-
-
-
-# from flask import Flask, render_template, request
-# import requests
-# import threading
-# import time
-# import os
-
-# app = Flask(__name__)
-
-# # Shared log buffer
-# log_buffer = []
-
-# # API endpoint (adjust if running on a different host/port)
-# API_URL = "http://localhost:8000/run-campaign"
-
-
-# @app.route("/", methods=["GET", "POST"])
-# def index():
-#     output = None
-
-#     if request.method == "POST":
-#         user_id = request.form["user_id"]
-#         query = request.form["query"]
-
-#         # Clear old logs
-#         log_buffer.clear()
-
-#         def stream_logs():
-#             log_file_path = os.path.abspath("logs/app.log")
-#             if os.path.exists(log_file_path):
-#                 with open(log_file_path, "r") as f:
-#                     f.seek(0, 2)  # Go to end
-#                     while True:
-#                         line = f.readline()
-#                         if line:
-#                             log_buffer.append(line)
-#                         time.sleep(0.2)
-
-#         threading.Thread(target=stream_logs, daemon=True).start()
-
-#         try:
-#             response = requests.post(API_URL, json={"user_id": user_id, "query": query})
-#             if response.status_code == 200:
-#                 output = response.json()
-#             else:
-#                 output = {"error": response.text}
-#         except Exception as e:
-#             output = {"error": str(e)}
-
-#     return render_template("index.html", logs=log_buffer, output=output)
-
-
-# if __name__ == "__main__":
-#     app.run(debug=True, port=5000)

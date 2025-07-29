@@ -97,21 +97,22 @@ class CampaignWorkflow:
                 lambda state: state.multi_variant_required,
                 {
                     True: "ab_testing",
-                    False: "human_review"
+                    False: END
                 }
             )
-        campaign_graph.add_edge("ab_testing", "human_review")
-        campaign_graph.add_conditional_edges("human_review", lambda x: x.requires_revision, {True: "recommend", False: "feedback_loop"})
+        campaign_graph.add_conditional_edges("ab_testing", lambda x: x.requires_revision, {True: "recommend", False: END})
 
-        # # If human review and feedback loop come after media_ad_generation:
-        # campaign_graph.add_edge("generate_ad", "media_ad_generation")
-        # campaign_graph.add_edge("media_ad_generation", "human_review")
-
-        # campaign_graph.add_edge("human_review", "feedback_loop")
-        campaign_graph.add_edge("feedback_loop", END)
-
-        # # Final edge if no post-generation steps
-        # campaign_graph.add_edge("media_ad_generation", END)
+        # campaign_graph.add_conditional_edges(
+        #         "is_ab_testing_needed",
+        #         lambda state: state.multi_variant_required,
+        #         {
+        #             True: "ab_testing",
+        #             False: "human_review"
+        #         }
+        #     )
+        # campaign_graph.add_edge("ab_testing", "human_review")
+        # campaign_graph.add_conditional_edges("human_review", lambda x: x.requires_revision, {True: "recommend", False: "feedback_loop"})
+        # campaign_graph.add_edge("feedback_loop", END)
 
         return campaign_graph.compile()
 

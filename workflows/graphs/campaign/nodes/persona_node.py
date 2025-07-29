@@ -41,11 +41,11 @@ class UserPersonaNode:
 
             Please generate a structured persona representing a typical digital user based on general online behavior patterns.
 
-            Your output must be a clear and concise **single sentence** that captures:
-            - The user's **age range** (e.g., 25-34)
-            - Their **primary interests or hobbies**
-            - Their typical **online behavior** (e.g., time spent on platforms, content preferences)
-            - Their **communication tone preferences** (e.g., formal, casual, witty)
+            Your output must be a clear and concise 'single sentence' that captures:
+            - The user's 'age range' (e.g., 25-34)
+            - Their 'primary interests or hobbies'
+            - Their typical 'online behavior' (e.g., time spent on platforms, content preferences)
+            - Their 'communication tone preferences' (e.g., formal, casual, witty)
 
             Ensure the description is natural and professional, suitable for presentation in an executive campaign brief.
 

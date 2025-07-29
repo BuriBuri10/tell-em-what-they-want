@@ -50,7 +50,7 @@ class ChannelConstraintsNode:
             - Campaign Objective: "{objective}"
             - Enriched User Persona: "{user_persona}"
 
-            Determine the most critical **channel-specific delivery constraints**. 
+            Determine the most critical 'channel-specific delivery constraints'. 
             Include legal, technical, content-format, and targeting limitations across:
             - Social Media (e.g., Instagram, LinkedIn, TikTok)
             - Email Marketing

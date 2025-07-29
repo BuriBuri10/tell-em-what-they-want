@@ -65,8 +65,9 @@ class RecommendNode:
             # Include human feedback if available
             ad_text = state.generated_ad or ""
             feedback = state.ad_feedback or ""
+            ad_variant = state.ad_variants or ""   # NOTE: temporarily
 
-            if feedback:
+            if feedback or ad_variant:
                 prompt_text += f"""
                 --- Feedback from Human Review ---
                 The following ad was generated earlier:
@@ -74,6 +75,9 @@ class RecommendNode:
 
                 The user has provided the following feedback:
                 "{feedback}"
+
+                Ad variants from AB Testing Node:
+                "{ad_variant}"                      
 
                 Please revise the campaign strategy considering this feedback.
                 """

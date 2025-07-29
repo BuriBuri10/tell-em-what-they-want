@@ -19,87 +19,33 @@ class HumanReviewDecision(BaseModel):
     require_review: bool = Field(..., description="True if human validation is needed")
 
 
-class HumanReviewRouter:
-    def __init__(self):
-        self.feedback_event = asyncio.Event()
-        self._feedback = None
-        self._decision = None
-
-    def receive_feedback(self, feedback: str, revision: bool):
-        self._feedback = feedback
-        self._decision = revision
-        self.feedback_event.set()
-
-    async def wait_for_feedback(self, prompt: str):
-        with open("human_prompt.txt", "w") as f:
-            f.write(prompt)
-
-        self.feedback_event.clear()
-        await self.feedback_event.wait()
-        return self._feedback, self._decision
-
-    async def process(self, state: GraphState) -> GraphState:
-        try:
-            ad_texts = state.ad_variants or [state.generated_ad]
-            ad_texts = [ad for ad in ad_texts if ad]
-
-            if not ad_texts:
-                logger.warning("No ads found for review. Skipping human review step.")
-                return state
-
-            reviewed_ads = []
-            for ad in ad_texts:
-                logger.info(f"Reviewing ad variant: {ad}")
-                score = simple_human_review_score(ad)
-                reviewed_ads.append({"ad": ad, "score": score})
-
-            state.reviewed_ads = reviewed_ads
-            state.requires_human_review = True
-
-            # Pausing and waiting for human feedback via UI
-            logger.info("Waiting for human feedback via web UI...")
-            feedback, revision = await self.wait_for_feedback(ad_texts[0])
-
-            state.ad_feedback = feedback
-            state.requires_revision = revision
-            logger.info(f"Feedback received: {feedback}, revision: {revision}")
-
-        except Exception as e:
-            logger.error(f"HumanReviewNode failed: {e}")
-
-        return state
-
-
 # class HumanReviewRouter:
-#     """
-#     Node responsible for performing human scoring and optionally collecting human feedback.
-#     """
-
 #     def __init__(self):
-#         """
-#         Initializes inline scoring and logs readiness.
-#         """
-#         self.chain = RunnableLambda(lambda x: x["input"])  # Placeholder logic
-#         logger.info("HumanReviewRouter initialized successfully with fallback chain.")
+#         self.feedback_event = asyncio.Event()
+#         self._feedback = None
+#         self._decision = None
+
+#     def receive_feedback(self, feedback: str, revision: bool):
+#         self._feedback = feedback
+#         self._decision = revision
+#         self.feedback_event.set()
+
+#     async def wait_for_feedback(self, prompt: str):
+#         with open("human_prompt.txt", "w") as f:
+#             f.write(prompt)
+
+#         self.feedback_event.clear()
+#         await self.feedback_event.wait()
+#         return self._feedback, self._decision
 
 #     async def process(self, state: GraphState) -> GraphState:
-#         """
-#         Scores ad variants and flags them for human review.
-#         Optionally captures feedback via user input.
-
-#         Args:
-#             state (GraphState): Current workflow state.
-
-#         Returns:
-#             GraphState: Updated with reviewed ads and feedback.
-#         """
 #         try:
-#             # Use ad_variants if present, fallback to single generated_ad
 #             ad_texts = state.ad_variants or [state.generated_ad]
 #             ad_texts = [ad for ad in ad_texts if ad]
+
 #             if not ad_texts:
 #                 logger.warning("No ads found for review. Skipping human review step.")
-#                 return state  # or raise a custom exception / handle accordingly
+#                 return state
 
 #             reviewed_ads = []
 #             for ad in ad_texts:
@@ -107,39 +53,93 @@ class HumanReviewRouter:
 #                 score = simple_human_review_score(ad)
 #                 reviewed_ads.append({"ad": ad, "score": score})
 
-#             state.reviewed_ads = reviewed_ads  # <-- #️⃣ Captures scores
-#             state.requires_human_review = True  # <-- #️⃣ Forces human routing
-#             logger.info("Human Review Forced....")
+#             state.reviewed_ads = reviewed_ads
+#             state.requires_human_review = True
 
-#             # Ad feedback
-#             try:
-#                 user_feedback = input("Please provide your feedback on the ad (or press Enter to approve as-is): ").strip()
-#             except EOFError:
-#                 user_feedback = ""
+#             # Pausing and waiting for human feedback via UI
+#             logger.info("Waiting for human feedback via web UI...")
+#             feedback, revision = await self.wait_for_feedback(ad_texts[0])
 
-#             if user_feedback:
-#                 state.ad_feedback = user_feedback
-#                 logger.info(f"Captured human feedback: {user_feedback}")
-
-#                 try:
-#                     decision = input("Wanna to proceed with your feedback for revision? (y/n): ").strip().lower()
-#                 except EOFError:
-#                     decision = "y"
-
-#                 if decision == "y":
-#                     state.requires_revision = True
-#                     logger.info("Marked for revision based on feedback.")
-#                 else:
-#                     state.requires_revision = False
-#                     logger.info("Feedback captured but ad approved as-is.")
-#             else:
-#                 logger.info("No feedback provided. Proceeding without revision.")
-#                 state.requires_revision = False
+#             state.ad_feedback = feedback
+#             state.requires_revision = revision
+#             logger.info(f"Feedback received: {feedback}, revision: {revision}")
 
 #         except Exception as e:
 #             logger.error(f"HumanReviewNode failed: {e}")
 
 #         return state
+
+
+class HumanReviewRouter:
+    """
+    Node responsible for performing human scoring and optionally collecting human feedback.
+    """
+
+    def __init__(self):
+        """
+        Initializes inline scoring and logs readiness.
+        """
+        self.chain = RunnableLambda(lambda x: x["input"])  # Placeholder logic
+        logger.info("HumanReviewRouter initialized successfully with fallback chain.")
+
+    async def process(self, state: GraphState) -> GraphState:
+        """
+        Scores ad variants and flags them for human review.
+        Optionally captures feedback via user input.
+
+        Args:
+            state (GraphState): Current workflow state.
+
+        Returns:
+            GraphState: Updated with reviewed ads and feedback.
+        """
+        try:
+            # Use ad_variants if present, fallback to single generated_ad
+            ad_texts = state.ad_variants or [state.generated_ad]
+            ad_texts = [ad for ad in ad_texts if ad]
+            if not ad_texts:
+                logger.warning("No ads found for review. Skipping human review step.")
+                return state  # or raise a custom exception / handle accordingly
+
+            reviewed_ads = []
+            for ad in ad_texts:
+                logger.info(f"Reviewing ad variant: {ad}")
+                score = simple_human_review_score(ad)
+                reviewed_ads.append({"ad": ad, "score": score})
+
+            state.reviewed_ads = reviewed_ads  # <-- #️⃣ Captures scores
+            state.requires_human_review = True  # <-- #️⃣ Forces human routing
+            logger.info("Human Review Forced....")
+
+            # Ad feedback
+            try:
+                user_feedback = input("Please provide your feedback on the ad (or press Enter to approve as-is): ").strip()
+            except EOFError:
+                user_feedback = ""
+
+            if user_feedback:
+                state.ad_feedback = user_feedback
+                logger.info(f"Captured human feedback: {user_feedback}")
+
+                try:
+                    decision = input("Wanna to proceed with your feedback for revision? (y/n): ").strip().lower()
+                except EOFError:
+                    decision = "y"
+
+                if decision == "y":
+                    state.requires_revision = True
+                    logger.info("Marked for revision based on feedback.")
+                else:
+                    state.requires_revision = False
+                    logger.info("Feedback captured but ad approved as-is.")
+            else:
+                logger.info("No feedback provided. Proceeding without revision.")
+                state.requires_revision = False
+
+        except Exception as e:
+            logger.error(f"HumanReviewNode failed: {e}")
+
+        return state
 
 
 # Manual test runner

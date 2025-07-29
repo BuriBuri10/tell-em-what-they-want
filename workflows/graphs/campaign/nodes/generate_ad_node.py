@@ -39,7 +39,8 @@ class GenerateAdNode:
 
             # Construct structured output-compatible prompt
             prompt_text = f"""
-                            You are an AI copywriter tasked with writing a compelling ad.
+                            You are an AI copywriter tasked with writing a compelling ad. Remove those asterisks from the response.
+                            Keep it professional.
 
                             User Segment:
                             {state.user_segment}
