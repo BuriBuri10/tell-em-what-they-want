@@ -1,3 +1,4 @@
+from datetime import datetime
 from langchain_core.runnables import RunnableLambda
 from core.chain import ChainAccess
 from workflows.state import GraphState
@@ -65,7 +66,8 @@ class GenerateAdNode:
             state.ad_generation_ready = True
             logger.info("Ad successfully generated.")
 
-            CampaignReportSaver.save(state, user_id=state.user_id, query=state.query)
+            timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")   # NOTE: temporary measure
+            CampaignReportSaver.save(state, user_id=state.user_id, query=state.query, timestamp=timestamp)
 
         except Exception as e:
             logger.error(f"Ad generation failed: {e}")

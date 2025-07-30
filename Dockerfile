@@ -11,6 +11,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy entire project into the container
 COPY . .
 
+# Copy .env into the container (local only)
+COPY .env /app/.env
+
 # Expose port
 EXPOSE 5000
 

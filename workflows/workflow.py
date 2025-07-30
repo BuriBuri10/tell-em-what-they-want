@@ -145,24 +145,24 @@ class CampaignWorkflow:
         filename = f"campaign_outputs/{user_id}_{timestamp}.txt"
         os.makedirs("campaign_outputs", exist_ok=True)
 
-        report = f"""📊 CAMPAIGN REPORT
-                ────────────────────────────
-                User ID: {user_id}
-                Timestamp: {timestamp}
-                Campaign Query: {query}
+        report = f""" CAMPAIGN REPORT
+            ───────────────────────────
+            User ID: {user_id}
+            Timestamp: {timestamp}
+            Campaign Query: {query}
 
-                User Segment: {state.user_segment or 'N/A'}
-                Campaign Objective: {state.campaign_objective or 'N/A'}
+            User Segment: {state.user_segment or 'N/A'}
+            Campaign Objective: {state.campaign_objective or 'N/A'}
 
-                Recommendation:
-                {state.campaign_recommendation or 'N/A'}
+            Recommendation:
+            {state.campaign_recommendation or 'N/A'}
 
-                Generated Ad Copy:
-                {state.generated_ad or 'N/A'}
+            Generated Ad Copy:
+            {state.generated_ad or 'N/A'}
 
-                Human Feedback:
-                {state.ad_feedback or 'No feedback provided.'}
-                """
+            Human Feedback:
+            {state.ad_feedback or 'No feedback provided.'}
+            """
         
         with open(filename, "w", encoding="utf-8") as f:
             f.write(report)
