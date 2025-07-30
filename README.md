@@ -1,12 +1,12 @@
-# tell-em-what-they-want
+[# tell-em-what-they-want](https://personalized-campaign-orchestrator.onrender.com)
 
-# 🎯 Tell 'Em What They Want — Personalized Marketing Orchestrator
+# Tell 'Em What They Want — Personalized Marketing Orchestrator
 
 A production-ready, modular AI-powered marketing orchestration platform. It leverages LLMs, LangGraph, and real-time human-in-the-loop feedback to generate personalized ads, validate campaign objectives, and optimize multichannel strategies.
 
 ---
 
-## 🧠 Overview
+## Overview
 
 **"Tell 'Em What They Want"** is designed to automate and personalize digital marketing workflows using the power of:
 - **LangGraph** orchestration
@@ -18,25 +18,25 @@ A production-ready, modular AI-powered marketing orchestration platform. It leve
 
 ---
 
-## 🔧 Features
+## Features
 
-- ✅ Campaign objective validation & refinement  
-- ✅ Persona segmentation & enrichment  
-- ✅ Budget classification & ad channel constraints  
-- ✅ Multichannel ad generation (text/image/video)  
-- ✅ AB testing & multivariant scoring  
-- ✅ Human review feedback loop  
-- ✅ LangGraph subgraph orchestration  
-- ✅ Plug-and-play modular design  
-- ✅ Render-ready deployment (Docker or non-Docker)  
+- Campaign objective validation & refinement  
+- Persona segmentation & enrichment  
+- Budget classification & ad channel constraints  
+- Multichannel ad generation (text/image/video)  
+- AB testing & multivariant scoring  
+- Human review feedback loop  
+- LangGraph subgraph orchestration  
+- Plug-and-play modular design  
+- Render-ready deployment (Docker or non-Docker)  
 
 ---
 
-## 🚀 Deployment (Render)
+## Deployment (Render)
 
 You can deploy this app on [Render](https://render.com) either **with or without Docker**.
 
-### ➤ Without Docker
+### Without Docker
 
 1. Push code to GitHub  
 2. Create new **Python Web Service** on Render  
@@ -45,7 +45,7 @@ You can deploy this app on [Render](https://render.com) either **with or without
    - **Start Command:** `python flask_app/app.py`  
 4. Add your `.env` variables in the Render dashboard  
 
-### ➤ With Docker
+### With Docker
 
 1. Use provided `Dockerfile` and optional `render.yaml`  
 2. Create a **Docker Web Service** on Render  
@@ -78,7 +78,7 @@ tell-em-what-they-want/
 
 ---
 
-## 🧪 Run Locally
+## Run Locally
 
 ```bash
 # Create and activate a virtual environment
