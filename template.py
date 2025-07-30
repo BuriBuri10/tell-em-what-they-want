@@ -11,7 +11,7 @@ folders_and_files = {
     "api/routes": ["__init__.py", "user.py", "campaign.py", "analytics.py"],
 
     "flask_app": ["app.py"],
-    "flask_app/templates": ["index.html"],
+    "flask_app/templates": ["index.html", "index_backup.html"],
 
     "configs": ["__init__.py", "app_config.py"],
 

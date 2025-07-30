@@ -1,12 +1,29 @@
-version: "3.8"
+version: "3.9"
 
 services:
-  ai-marketing-platform:
+  flask-app:
     build: .
+    container_name: flask_logger
     ports:
-      - "8000:8000"
-    env_file:
-      - .env
+      - "5000:5000"
     volumes:
-      - .:/app
-    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+      - ./logs:/app/logs  # Local logs folder mapped
+    environment:
+      - FLASK_ENV=development
+
+
+
+
+
+# version: "3.8"
+
+# services:
+#   ai-marketing-platform:
+#     build: .
+#     ports:
+#       - "8000:8000"
+#     env_file:
+#       - .env
+#     volumes:
+#       - .:/app
+#     command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload

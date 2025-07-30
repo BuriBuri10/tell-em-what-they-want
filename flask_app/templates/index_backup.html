@@ -37,12 +37,7 @@
 
         .stroked-text {
             color: transparent;
-            -webkit-text-stroke: 3px #EFEFEF;
-        }
-
-        .dentsu-font-stan {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700; /* Bold weight, similar to the logo */
+            -webkit-text-stroke: 1px #EFEFEF;
         }
 
         .gradient-text {
@@ -135,7 +130,7 @@
     <main class="pt-20">
         <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-32 text-center">
             <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter reveal">
-                <span class="dent-font-stan">Marketing Campaign Orchestration</span> <br><br> <span class="gradient-text">Powered by -- </span> <span class="dentsu-font normal-case">dentsuAI</span>
+                Marketing Campaign Orchestration<br><br><span class="gradient-text">Powered by -- </span> <span class="dentsu-font normal-case">dentsuAI</span>
             </h2>
             <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-400 reveal">
                 Seamlessly launch, monitor, and analyze your marketing initiatives with cutting-edge automation and real-time feedback.
@@ -145,13 +140,13 @@
         <section class="impact-section">
             <div class="sticky-container">
                 <div class="backgrounds absolute inset-0">
-                    <div class="impact-bg bg-1" style="background-image: url('https://www.dentsucreative.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F155984%2F1792x1008%2F011c061dee%2Fvice-unfiltered-history-tour.png%2Fm%2F&w=1920&q=75');"></div>
-                    <div class="impact-bg bg-2 opacity-0" style="background-image: url('https://www.dentsucreative.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F155984%2F3584x2016%2F88c8bb5d2c%2Fthe-inflation-cookbook-receipt.jpg%2Fm%2F&w=1024&q=75');"></div>
-                    <div class="impact-bg bg-3 opacity-0" style="background-image: url('https://www.dentsucreative.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F155984%2F3584x2016%2F0696c5a0ac%2Fcrayola-we-colour-the-world.jpg%2Fm%2F&w=1920&q=75');"></div>
+                    <div class="impact-bg bg-1" style="background-image: url('https://images.pexels.com/photos/163007/feet-shoelaces-shoes-shoelaces-163007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+                    <div class="impact-bg bg-2 opacity-0" style="background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+                    <div class="impact-bg bg-3 opacity-0" style="background-image: url('https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
                 </div>
                 <div class="relative text-center text-white p-4" style="background-color: rgba(0,0,0,0.5); border-radius: 1rem;">
-                    <h3 class="text-2xl md:text-4xl font-light mb-4 tracking-wider"><span class="dentsu-font-stan normal case">Transformative Creativity</span></h3>
-                    <h2 class="text-6xl md:text-9xl font-black impact-text" style="line-height: 1.1;">IMPACTS <span class="stroked-text">PEOPLE</span></h2>
+                    <h3 class="text-2xl md:text-4xl font-light mb-4 tracking-wider">Transformative Creativity</h3>
+                    <h2 class="text-6xl md:text-9xl font-black impact-text" style="line-height: 1.1;">IMPACTS PEOPLE</h2>
                 </div>
             </div>
         </section>
@@ -243,24 +238,14 @@
                             pin: ".sticky-container"
                         }
                     });
-                   // --- MODIFIED: Switched to innerHTML to preserve the stroked text style ---
-                    tl.to(impactText, { 
-                        opacity: 0, 
-                        duration: 0.1, 
-                        onComplete: () => impactText.innerHTML = 'IMPACTS <span class="stroked-text">BUSINESS</span>' 
-                    })
-                    .to(backgrounds[0], { opacity: 0, duration: 0.1 }, "<")
-                    .to(backgrounds[1], { opacity: 1, duration: 0.1 }, "<")
-                    .to(impactText, { opacity: 1, duration: 0.1 });
-                    
-                    tl.to(impactText, { 
-                        opacity: 0, 
-                        duration: 0.1, 
-                        onComplete: () => impactText.innerHTML = 'IMPACTS <span class="stroked-text">SOCIETY</span>'
-                    }, ">0.5")
-                    .to(backgrounds[1], { opacity: 0, duration: 0.1 }, "<")
-                    .to(backgrounds[2], { opacity: 1, duration: 0.1 }, "<")
-                    .to(impactText, { opacity: 1, duration: 0.1 });
+                    tl.to(impactText, { opacity: 0, duration: 0.1, onComplete: () => impactText.textContent = "IMPACTS BUSINESS" })
+                      .to(backgrounds[0], { opacity: 0, duration: 0.1 }, "<")
+                      .to(backgrounds[1], { opacity: 1, duration: 0.1 }, "<")
+                      .to(impactText, { opacity: 1, duration: 0.1 });
+                    tl.to(impactText, { opacity: 0, duration: 0.1, onComplete: () => impactText.textContent = "IMPACTS SOCIETY" }, ">0.5")
+                      .to(backgrounds[1], { opacity: 0, duration: 0.1 }, "<")
+                      .to(backgrounds[2], { opacity: 1, duration: 0.1 }, "<")
+                      .to(impactText, { opacity: 1, duration: 0.1 });
                 }
 
                 const revealElements = document.querySelectorAll('.reveal');
@@ -339,3 +324,260 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dentsu Personalized Campaign Orchestrator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- GSAP (GreenSock Animation Platform) for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        /* Use Inter as the default font */
+        body {
+            font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #EFEFEF;
+            overflow-x: hidden; /* Prevent horizontal scroll caused by animations */
+        }
+
+        /* ⬇️ 2. ADD THE CUSTOM FONT STYLE ⬇️ */
+        .font-dentsu-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Bold weight, similar to the logo */
+            font-size: 1.5em;
+        }
+
+        /* Custom styles for a more polished look */
+        .gradient-text {
+            background: linear-gradient(90deg, #3DDEBF, #97FFD5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-input {
+            background-color: #1A1A1A;
+            border: 1px solid #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3DDEBF;
+            box-shadow: 0 0 0 2px rgba(61, 222, 191, 0.3);
+        }
+        
+        .submit-btn {
+            background-color: #FFFFFF;
+            color: #000000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #3DDEBF;
+            transform: scale(1.03);
+        }
+
+        /* Hide elements for animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 w-full z-10 bg-black/50 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="flex justify-between items-center h-20 border-b border-gray-800">
+                <h1 class="text-xl font-bold tracking-wider uppercase">
+                    <span class="font-dentsu-brand normal-case">dentsu </span> <span class="font-light"> Personalized Campaign Orchestrator </span>
+                </h1>
+                <a href="https://www.dentsucreative.com" target="_blank" class="text-sm text-gray-400 hover:text-white transition-colors duration-300">
+                    Inspired by Dentsu Creative
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-32 text-center">
+            <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter reveal">
+                Marketing Campaign Orchestration<br><br> <span class="gradient-text">Powered by -- dentsuAI</span>
+            </h2>
+            <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-400 reveal">
+                Seamlessly launch, monitor, and analyze your marketing initiatives with cutting-edge automation and real-time feedback.
+            </p>
+        </section>
+
+        <!-- Form Section -->
+        <section class="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 py-16 reveal">
+            <div class="bg-[#101010] border border-gray-800 rounded-2xl p-8 sm:p-12">
+                <h3 class="text-2xl font-bold mb-2 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#3DDEBF]"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                    <span>Launch a New Campaign</span>
+                </h3>
+                <p class="text-gray-400 mb-8">Fill in the details below to deploy your campaign workflow.</p>
+                
+                <form method="POST" class="space-y-6">
+                    <div>
+                        <label for="user_id" class="block text-sm font-medium text-gray-300 mb-2">User ID</label>
+                        <input id="user_id" name="user_id" type="text" value="eg.- dentsuitte" required class="w-full px-4 py-3 rounded-lg form-input">
+                    </div>
+
+                    <div>
+                        <label for="query" class="block text-sm font-medium text-gray-300 mb-2">Campaign Query</label>
+                        <input id="query" name="query" type="text" value="eg.- promote next-gen eco-friendly sneakers" required class="w-full px-4 py-3 rounded-lg form-input">
+                    </div>
+
+                    <div class="pt-4">
+                        <input type="submit" value="Run Campaign" class="w-full py-4 rounded-lg font-bold text-lg cursor-pointer submit-btn">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Logs and Output Section -->
+        <section class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-16 space-y-16">
+            <!-- Conditional Output Block -->
+            {% if output %}
+            <div class="output-display reveal">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#3DDEBF]"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Campaign Output</span>
+                </h3>
+                <pre class="bg-gray-900 border border-gray-700 text-gray-300 p-6 rounded-lg font-mono text-sm whitespace-pre-wrap word-wrap-break-word">{{ output | safe }}</pre>
+
+                {% if docx_link %}
+                <div class="mt-6 text-right">
+                    <a href="{{ docx_link }}" class="inline-block bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-[#3DDEBF] transition duration-300">
+                        📄 Download .DOCX Report
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            <!-- Logs -->
+            <div class="logs-output reveal">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#3DDEBF]"><path d="M12 12h.01"></path><path d="M16 6h.01"></path><path d="M16 18h.01"></path><path d="M8 6h.01"></path><path d="M8 18h.01"></path><path d="M12 6h.01"></path><path d="M12 18h.01"></path></svg>
+                    <span>Live Log Stream</span>
+                </h3>
+                <pre id="logs" class="bg-[#101010] border border-gray-800 text-gray-300 p-6 rounded-2xl h-96 overflow-y-auto font-mono text-sm whitespace-pre-wrap word-wrap-break-word">Initializing log stream... waiting for data.</pre>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mt-24">
+        <div class="py-8 border-t border-gray-800 text-center text-gray-500">
+            <p>&copy; 2025 <a href="https://www.dentsucreative.com" target="_blank" class="hover:text-white transition-colors duration-300">Created with Hope</a> — Happy Building!</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- LOG FETCHING SCRIPT ---
+        async function fetchLogs() {
+            try {
+                const response = await fetch("/logs");
+                const data = await response.json();
+
+                const logsElement = document.getElementById("logs");
+                const logLines = data.logs.join('\n');
+                logsElement.innerText = logLines;
+
+                // Auto-scroll to bottom
+                logsElement.scrollTop = logsElement.scrollHeight;
+            } catch (err) {
+                console.error("Error fetching logs:", err);
+            }
+        }
+
+        setInterval(fetchLogs, 2000);
+
+        // --- ANIMATION SCRIPT ---
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate elements with the .reveal class
+            const revealElements = document.querySelectorAll('.reveal');
+
+            revealElements.forEach((el, index) => {
+                gsap.to(el, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 90%', // When the top of the element is 90% from the top of the viewport
+                        toggleActions: 'play none none none',
+                        // markers: true, // Uncomment for debugging
+                    },
+                    // Add a slight delay to the initial hero elements for a staggered effect
+                    delay: el.closest('section.text-center') ? index * 0.15 : 0
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
