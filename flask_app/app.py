@@ -12,7 +12,7 @@ import sys
 project_root = Path(__file__).resolve().parents[1]
 sys.path.append(str(project_root))
 
-from workflows.workflow import CampaignWorkflow  # 👈 direct use
+from workflows.workflow import CampaignWorkflow  # direct use
 from core.utils.campaign_recs import CampaignReportSaver  # if needed
 
 app = Flask(__name__)
