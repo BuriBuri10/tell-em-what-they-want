@@ -1,5 +1,7 @@
 [# tell-em-what-they-want](https://personalized-campaign-orchestrator.onrender.com)
 
+# https://personalized-campaign-orchestrator.onrender.com
+
 # Tell 'Em What They Want — Personalized Marketing Orchestrator
 
 A production-ready, modular AI-powered marketing orchestration platform. It leverages LLMs, LangGraph, and real-time human-in-the-loop feedback to generate personalized ads, validate campaign objectives, and optimize multichannel strategies.
