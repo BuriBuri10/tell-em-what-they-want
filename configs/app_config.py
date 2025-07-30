@@ -26,7 +26,8 @@ class AppConfig:
             raise Exception("This is a singleton class and can't be instantiated more than once")
 
         # Skipping .env loading if all needed variables are already set in environment
-        if os.getenv("GROQ_API_KEY") and os.getenv("REDDIT_CLIENT_ID") and os.getenv("REDDIT_CLIENT_SECRET"):
+        # if os.getenv("GROQ_API_KEY") and os.getenv("REDDIT_CLIENT_ID") and os.getenv("REDDIT_CLIENT_SECRET"):
+        if all(var in os.environ for var in ["GROQ_API_KEY"]):
             print("[DEBUG] Using existing environment variables (Docker mode)")
         else:
             # Fallback to searching for .env only in dev mode
