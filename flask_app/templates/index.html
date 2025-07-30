@@ -244,16 +244,13 @@
             function splitTextIntoChars(selector) {
                 const element = document.querySelector(selector);
                 if (!element) return;
-                const text = element.innerHTML;
+                const text = element.innerHTML.trim().replace(/<br\s*\/?>/gi, "<br>");
                 element.innerHTML = '';
                 const lines = text.split('<br>');
-                
                 lines.forEach(line => {
-                    if (line.trim() === '') return;
                     const lineDiv = document.createElement('div');
                     lineDiv.classList.add('line-wrapper');
-                    const chars = line.split('');
-                    
+                    const chars = line.trim().split('');
                     chars.forEach(char => {
                         const charSpan = document.createElement('span');
                         charSpan.classList.add('char');
@@ -265,14 +262,10 @@
             }
 
             function initPageAnimations() {
+                // Animate Hero Text
                 gsap.set('.hero-text', { visibility: 'visible' });
                 splitTextIntoChars('#hero-top-text');
                 splitTextIntoChars('#hero-bottom-text');
-
-                gsap.set('.orchestrator-text', { visibility: 'visible' });
-                splitTextIntoChars('#orchestrator-top-text');
-                splitTextIntoChars('#orchestrator-bottom-text');
-
                 gsap.to('.char', {
                     y: '0%',
                     stagger: 0.03,
