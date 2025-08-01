@@ -139,7 +139,7 @@
 
         <section id="orchestrator-section" class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-32 text-center">
             <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter reveal">
-                Marketing Campaign Orchestrator ft. Finacial Transactions<br><br>
+                Marketing Campaign Orchestrator<br><span class="stroked-text">ft. Finacial Transactions</span><br><br>
                 <span class="font-light">Your hyperPersonalized Marketing Tactician</span> <br><br>
                 <span class="gradient-text">Powered by </span> -- <span class="dentsu-font normal-case">dentsuAI</span>
             </h2>
@@ -266,13 +266,20 @@
                 gsap.set('.hero-text', { visibility: 'visible' });
                 splitTextIntoChars('#hero-top-text');
                 splitTextIntoChars('#hero-bottom-text');
-                gsap.to('.char', {
-                    y: '0%',
-                    stagger: 0.03,
-                    duration: 1,
-                    ease: 'power3.out'
-                });
-                
+    
+                // 1. Create a controllable animation timeline and keep it paused
+                const heroCharAnimation = gsap.timeline({ paused: true })
+                    .to('.char', {
+                        y: '0%',
+                        stagger: 0.03,
+                        duration: 1,
+                        ease: 'power3.out'
+                    });
+    
+                // 2. Play the animation once on page load, just like before
+                heroCharAnimation.play();
+    
+                // 3. Add callbacks to the existing ScrollTrigger to control the timeline
                 gsap.to("#hero-section", {
                     opacity: 0,
                     scrollTrigger: {
@@ -281,10 +288,14 @@
                         end: "bottom center",
                         scrub: true,
                         pin: true,
-                        pinSpacing: false
+                        pinSpacing: false,
+                        // Restart the animation when scrolling back into view
+                        onEnterBack: () => heroCharAnimation.restart(),
+                        // Reverse and pause the animation when it's scrolled past
+                        onLeave: () => heroCharAnimation.reverse().pause()
                     }
                 });
-
+    
                 gsap.to("#orchestrator-section", {
                     opacity: 0,
                     scrollTrigger: {
@@ -296,7 +307,7 @@
                         pinSpacing: false
                     }
                 });
-
+    
                 const impactSection = document.querySelector('.impact-section');
                 if (impactSection) {
                     const impactText = impactSection.querySelector('.impact-text');
@@ -310,7 +321,7 @@
                             pin: ".sticky-container"
                         }
                     });
-
+    
                     tl.to({}, {duration: 0.25});
                     tl.to(backgrounds[0], { opacity: 0, duration: 0.5 });
                     tl.set(impactText, { innerHTML: 'IMPACTS <span class="stroked-text">BUSINESS</span>' }, ">-0.25");
@@ -337,7 +348,7 @@
                     tl.to(backgrounds[6], { opacity: 1, duration: 0.5 }, "<");
                     tl.to({}, {duration: 0.25});
                 }
-
+    
                 const revealElements = document.querySelectorAll('.reveal');
                 revealElements.forEach((el) => {
                     gsap.to(el, {
@@ -348,7 +359,7 @@
                         scrollTrigger: {
                             trigger: el,
                             start: 'top 90%',
-                            toggleActions: 'play none none none',
+                            toggleActions: 'play none none reverse',
                         }
                     });
                 });
