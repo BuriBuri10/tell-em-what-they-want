@@ -100,6 +100,98 @@
         .preloader-half.right {
             right: 0; border-radius: 50vh 0 0 50vh;
         }
+
+        /* Campaign Output CRT TV Style */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        .output-display {
+            background-color: #1e1e1e; /* Dark charcoal gray */
+            border-radius: 2rem; /* General roundness */
+            padding: 1.5rem;
+            position: relative;
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.6), /* Outer shadow for depth */
+                inset 0 0 20px rgba(0, 0, 0, 0.7); /* Inner shadow for a slight concavity */
+        }
+        .outout-display h3 {
+            text-align: center;
+            color: #f0f0f0;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        #outputs {
+            background-color: #000; /* Pure black screen */
+            color: #00ff00; /* Bright green text */
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            line-height: 1.3;
+            border-radius: 1rem; /* Rounded corners for the screen */
+            padding: 1rem;
+            overflow: auto; /* Ensure scrollbar still works */
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9); /* Deeper inset for the screen */
+            text-shadow: 0 0 5px #00ff00; /* Green glow for the text */
+            position: relative; /* For overlays */
+        }
+        #outputsss::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 1px, transparent 50%, rgba(0, 0, 0, 0.8) 99%, transparent 100%) 50% 0 repeat;
+            background-size: 100% 2px;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+
+        /* Live Log Streaming CRT TV Style */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        .logs-output {
+            background-color: #1e1e1e; /* Dark charcoal gray */
+            border-radius: 2rem; /* General roundness */
+            padding: 1.5rem;
+            position: relative;
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.6), /* Outer shadow for depth */
+                inset 0 0 20px rgba(0, 0, 0, 0.7); /* Inner shadow for a slight concavity */
+        }
+        .logs-output h3 {
+            text-align: center;
+            color: #f0f0f0;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        #logs {
+            background-color: #000; /* Pure black screen */
+            color: #00ff00; /* Bright green text */
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            line-height: 1.3;
+            border-radius: 1rem; /* Rounded corners for the screen */
+            padding: 1rem;
+            overflow: auto; /* Ensure scrollbar still works */
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9); /* Deeper inset for the screen */
+            text-shadow: 0 0 5px #00ff00; /* Green glow for the text */
+            position: relative; /* For overlays */
+        }
+        #logs::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 1px, transparent 50%, rgba(0, 0, 0, 0.8) 99%, transparent 100%) 50% 0 repeat;
+            background-size: 100% 2px;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.1;
+        }
     </style>
 </head>
 
@@ -178,7 +270,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#3DDEBF]"><polyline points="20 6 9 17 4 12"></polyline></svg>
                     <span>Campaign Output</span>
                 </h3>
-                <pre class="bg-gray-900 border border-gray-700 text-gray-300 p-6 rounded-lg h-96 overflow-y-auto font-mono text-sm whitespace-pre-wrap word-wrap-break-word">{{ output | safe }}</pre>
+                <pre id="outputs" class="h-96 overflow-y-auto whitespace-pre-wrap word-wrap-break-word">{{ output | safe }}</pre>
                 
                 {% if docx_link %}
                 <div class="mt-6 text-right">
@@ -195,7 +287,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#3DDEBF]"><path d="M12 12h.01"></path><path d="M16 6h.01"></path><path d="M16 18h.01"></path><path d="M8 6h.01"></path><path d="M8 18h.01"></path><path d="M12 6h.01"></path><path d="M12 18h.01"></path></svg>
                     <span>Live Log Stream</span>
                 </h3>
-                <pre id="logs" class="bg-[#101010] border border-gray-800 text-gray-300 p-6 rounded-2xl h-96 overflow-y-auto font-mono text-sm whitespace-pre-wrap word-wrap-break-word">Initializing log stream... waiting for data.</pre>
+                <pre id="logs" class="p-6 h-96 overflow-y-auto font-mono text-sm whitespace-pre-wrap word-wrap-break-word">Initializing log stream... waiting for data</pre>
             </div>
         </section>
 
